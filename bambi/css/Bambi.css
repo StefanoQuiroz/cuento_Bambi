@@ -1,0 +1,2300 @@
+.creditos .imagen_portada,
+#final_cuento .creditos .imagen_portada{
+    display: grid;
+    background-image: url("../img/bambi/portada.jpg");
+    background-size: cover;
+    background-position: 75%;
+    background-repeat: no-repeat;    
+/*    background-color: #fff;*/
+}
+
+.title h2{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/************ESCE00***********/
+
+#escena_00 .plantasEsc00{
+    width: 2500px;
+    height: 4000px;
+    position: absolute;
+    z-index: 2;
+    top: 42%;
+    left: -224px;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+   
+}
+
+.spritePlantasEscena_00 { 
+    background-image: url("../img/bambi/sprite/escena01/plantas_blur.png");   
+}
+
+
+#escena_00 .pajaro1Esc00{
+    width: 83px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 41.6%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+   
+}
+
+.spritePajaro1Esc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/sprites/pajaro.png");   
+}
+
+
+#escena_00 .pajaro2Esc00{
+    width: 80px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 9%;
+    left: 55%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+   
+}
+
+.spritePajaro2Esc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/jararo2.png");   
+}
+
+
+#escena_00 .pajaro2OjoEsc00{
+    width: 9px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 9.7%;
+    left: 57.8%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    
+   
+}
+
+.spritePajaro2OjoEsc_00{ 
+    background-image: url("../img/bambi/sprite/escena01/jararo2_ojo.png");   
+}
+
+
+#escena_00 .pajaroVolandoEsc00{
+    width: 120px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 13%;
+    left: -6%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+   
+}
+
+.spritePajaroVolandoEsc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/sprites/pajaro_volando.png");   
+}
+
+
+#escena_00 .mapache1Esc00{
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 15%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteMapache1Esc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/mapache_2.png");   
+}
+
+
+#escena_00 .mapache1OjoEsc00{
+    width: 113px;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 17.3%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteMapache1OjoEsc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/mapache_2_ojos.png")   
+}
+
+#escena_00 .conejoEsc00{
+    width: 295px;
+    height: 820px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 25%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteConejoEsc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/conejo.png");   
+}
+
+
+#escena_00 .conejoOjoEsc00{
+    width: 70px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 66%;
+    left: 34.6%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteConejoOjoEsc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/conejo_ojo.png");   
+}
+
+
+#escena_00 .ardillaEsc00{
+    width: 230px;
+    height: 820px;
+    position: absolute;
+    z-index: 1;
+    top: 82%;
+    left: 40%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteArdillaEsc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/ardilla.png");   
+}
+
+#escena_00 .ardillaOjoEsc00{
+    width: 35px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 84.7%;
+    left: 49.6%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteArdillaOjoEsc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/ardilla_ojo.png");   
+}
+
+
+#escena_00 .mapache2Esc00{
+    width: 660px;
+    height: 800px;
+    position: absolute;
+    z-index: 1;
+    top: 33%;
+    left: 76%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteMapache2Esc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/mapache_1.png");   
+}
+
+
+#escena_00 .mapache2OjoEsc00{
+    width: 101px;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+    top: 40.8%;
+    left: 79%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0;
+}
+
+.spriteMapache2OjoEsc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/mapache_1_ojo.png")   
+}
+
+
+#escena_00 .cuerpoEsc00{
+    width: 611px;
+    height: 800px;
+    position: absolute;
+    z-index: 0;
+    top: 34%;
+    left: 34.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteMamaCuerpoEsc_00{ 
+    background-image: url("../img/bambi/sprite/escena01/mamabambi_cuerpo.png")   
+}
+
+
+#escena_00 .mamaCuelloEsc00{
+    width: 320px;
+    height: 815px;
+    position: absolute;
+    z-index: 3;
+    top: 18%;
+    left: 37.8%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteMamaCuelloEsc_00{ 
+    background-image: url("../img/bambi/sprite/escena01/mamabambi_cabeza.png")   
+}
+
+
+#escena_00 .colaEsc00{
+    width: 100px;
+    height: 300px;
+    position: absolute;
+    z-index: 3;
+    top: 37%;
+    left: 61%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteMamaColaEsc_00{ 
+    background-image: url("../img/bambi/sprite/escena01/cola_mama.png")   
+}
+
+
+#escena_00 .bambiEsc00{
+    width: 270px;
+    height: 815px;
+    position: absolute;
+    z-index: 3;
+    top: 51%;
+    left: 51%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteBambiEsc_00{ 
+    background-image: url("../img/bambi/sprite/escena01/bambi.png")   
+}
+
+
+#escena_00 .bambiOjoEsc00{
+    width: 65px;
+    height: 500px;
+    position: absolute;
+    z-index: 4;
+    top: 56.7%;
+    left: 54%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteBambiOjoEsc_00 { 
+    background-image: url("../img/bambi/sprite/escena01/bambi_ojo.png")   
+}
+
+
+ 
+/************ESCENA01***********/
+#escena_01 .pezEsc01{
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    left: 45%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spritePezEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/pez.png");   
+}
+
+#escena_01 .ojoPezEsc01{
+    width: 36px;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    top: 81.6%;
+    left: 45.5%;
+    opacity: 1;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoPezEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/pez_ojo.png");   
+}
+
+#escena_01 .conejoEsc01{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    top: 41.9%;
+    left: 7.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteConejoEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/conejo.png");   
+}
+
+#escena_01 .ojoConejoEsc01{
+    width: 45px;
+    height: 60px;
+    position: absolute;
+    z-index: 2;
+    top: 52.2%;
+    left: 18.1%;
+    opacity:1;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoConejoEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/conejo_ojo.png");   
+}
+
+#escena_01 .cuerpoBambiEsc01{
+    width: 1100px;
+    height: 850px;
+    position: absolute;
+    z-index: 1;
+    top: 23.5%;
+    left: 100%; /* 45%  +55*/
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCuerpoBambiEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/bambi.png");   
+}
+
+
+#escena_01 .ojoBambiEsc01{
+    width: 126px;
+    height: 400px;
+    position: absolute;
+    z-index: 1;
+    top: 45.7%;
+    left: 109.2%; /* 54.2 */
+    opacity: 1;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoBambiEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/bambi_ojo.png");   
+}
+
+#escena_01 .colaBambiEsc01{
+    width: 126px;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+    top: 82%;
+    left: 146%; /* 91 */
+    transform: rotate(-24deg);
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteColaBambiEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/bambi_cola.png");   
+}
+
+#escena_01 .parcheFondoEsc01{
+    width: 2040px;
+    height: 750px;
+    position: absolute;
+    z-index: 1;
+    top: 55%;
+    left: 0%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteParcheFondoEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/plantas_blur.png");   
+}
+ 
+#escena_01 .cuerpoFalinaEsc01{
+    width: 280px;
+    height: 430px;
+    position: absolute;
+    z-index: 1;
+    top: 33%;
+    left: 21.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCuerpoFalinaEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/falina_cuerpo.png");   
+}
+
+#escena_01 .cabezaFalinaEsc01{
+    width: 260px;
+    height: 430px;
+    position: absolute;
+    z-index: 1;
+    top: 21%;
+    left: 31.5%;
+    transform: rotate(45deg);   
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCabezaFalinaEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/falina_cabeza.png");   
+}
+
+#escena_01 .colaFalinaEsc01{
+    width: 89px;
+    height: 130px;
+    position: absolute;
+    z-index: 1;
+    top: 27.4%;
+    left: 24.75%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteColaFalinaEsc_01{ 
+    background-image: url("../img/bambi/sprite/escena02/falina_cola.png");   
+}
+
+
+
+
+
+
+
+
+
+
+/************ESCE02***********/
+
+
+#escena_02 .plantasEsc02{
+    width: 2515px;
+    height: 7000px;
+    position: absolute;
+    z-index: 15;
+    top: 0%;
+    left: -15%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+   
+}
+
+.spritePlantasEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/arboles_blur.png");   
+}
+
+
+#escena_02 .buhoEsc02{
+    width: 85px;
+    height: 500px;
+    position: absolute;
+    z-index: 4;
+    top: 9%;
+    left: 32%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteBuhoEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/sprites/buho.png")   
+}
+
+
+#escena_02 .ojosZorroEsc02{
+    width: 64px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 24%;
+    left: 39.2%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjosZorroEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/zorro_ojos.png")   
+}
+
+
+#escena_02 .ojosConejoEsc02{
+    width: 23px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 31.8%;
+    left: 81%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjosConejoEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/conejo_ojo.png")   
+}
+
+#escena_02 .patoEsc02{
+    width: 265px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 75%;
+    left: -13%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spritePatoEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/sprites/pato.png")   
+}
+
+
+#escena_02 .conejoTornadoEsc02{
+    width: 270px;
+    height: 400px;
+    position: absolute;
+    z-index: 3;
+    top: 43%;
+    left: 100%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteConejoTornadoEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/sprites/conejo.png")   
+}
+
+
+#escena_02 .ardillaEsc02{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    z-index: 9;
+    top: 74%;
+    left: 100%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+    transform: scaleX(-1);
+}
+
+.spriteArdillaEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/sprites/ardilla.png")   
+}
+
+
+
+#escena_02 .bambiCabezaEsc02{
+    width: 270px;
+    height: 500px;
+    position: absolute;
+    z-index: 8;
+    top: 24%;
+    left: 47%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteBambiCabezaEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/bambi_cabeza1.png")   
+}
+
+
+
+
+#escena_02 .bambiCuerpoEsc02{
+    width: 386px;
+    height: 800px;
+    position: absolute;
+    z-index: 8;
+    top: 21.5%;
+    left: 48.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteBambiCuerpoEsc_02 { 
+    background-image: url("../img/bambi/sprite/escena03/bambi_cuerpo.png")   
+}
+
+
+
+#escena_02 .bamPierDelDerEsc02{
+    width: 60px;
+    height: 800px;
+    position: absolute;
+    z-index: 7;
+    top: 54%;
+    left: 52.8%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteBamPiernaDelDer_02 { 
+    background-image: url("../img/bambi/sprite/escena03/bambi_pierna_der_adelante.png")   
+}
+
+
+#escena_02 .bamPierDelIzqEsc02{
+    width: 68px;
+    height: 800px;
+    position: absolute;
+    z-index: 9;
+    top: 54%;
+    left: 56%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteBamPiernaDelIzq_02 { 
+    background-image: url("../img/bambi/sprite/escena03/bambi_pierna_izq_adelante.png")   
+}
+
+
+#escena_02 .bamPierTrasDerEsc02{
+    width: 160px;
+    height: 800px;
+    position: absolute;
+    z-index: 7;
+    top: 50%;
+    left: 62%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteBamPiernaTrasDer_02 { 
+    background-image: url("../img/bambi/sprite/escena03/bambi_pierna_der_atras\ \(1\).png")   
+}
+
+
+#escena_02 .bamPierTrasIzqEsc02{
+    width: 171px;
+    height: 800px;
+    position: absolute;
+    z-index: 9;
+    top: 49%;
+    left: 62.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteBamPiernaTrasIzq_02 { 
+    background-image: url("../img/bambi/sprite/escena03/bambi_pierna_izq_atras.png")   
+}
+
+/************ESCE03***********/
+#escena_03 .bambiMamaEsc03{
+    width: 700px;
+    height: 900px;
+    position: absolute;
+    z-index: 9;
+    top: 8%;
+    left: 32.5%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteBambiMamaEsc_03 { 
+    background-image: url("../img/bambi/sprite/escena04/sprites/mama.png")   
+}
+
+#escena_03 .bambiEsc03{
+    width: 530px;
+    height: 600px;
+    position: absolute;
+    z-index: 9;
+    top: 35%;
+    left: 39.5%;
+
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteBambiEsc_03 { 
+    background-image: url("../img/bambi/sprite/escena04/sprites/bambi.png")   
+}
+
+#escena_03 .conejoEsc03{
+    width: 216px;
+    height: 180px;
+    position: absolute;
+    z-index: 1;
+    top: 69%;
+    left: 35.5%;
+
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteConejoEsc_03 { 
+    background-image: url("../img/bambi/sprite/escena04/sprites/conejo.png")   
+}
+
+#escena_03 .pajaroEsc03{
+    width: 134px;
+    height: 170px;
+    position: absolute;
+    z-index: 9;
+    top: 19%;
+    left: 53.5%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spritePajaroEsc_03 { 
+    background-image: url("../img/bambi/sprite/escena04/sprites/pajaro.png")   
+}
+
+#escena_03 .cazadorEsc03{
+    width: 802px;
+    height: 820px;
+    position: absolute;
+    z-index: 1;
+    top: 47%;
+    left: 67.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCazadorEsc_03 { 
+    background-image: url("../img/bambi/sprite/escena04/cazador.png")   
+}
+
+#escena_03 .plantasEsc03{
+    width: 1000px;
+    height: 300px;
+    position: absolute;
+    z-index: 9;
+    top: 83.2%;
+    left: 50.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spritePlantasEsc_03 { 
+    background-image: url("../img/bambi/sprite/escena04/plantas.png")   
+}
+
+#escena_03 .plantas2Esc03{
+    width: 2000px;
+    height: 3000px;
+    position: absolute;
+    z-index: 9;
+    top: 66.2%;
+    left: -3.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spritePlantas2Esc_03 { 
+    background-image: url("../img/bambi/sprite/escena04/plantas.png")   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************ESCE04***********/
+
+#escena_04 .plantasEsc04{
+    width: 2515px;
+    height: 7000px;
+    position: absolute;
+    z-index: 15;
+    top: 48%;
+    left: -14%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spritePlantasEsc_04 { 
+    background-image: url("../img/bambi/sprite/escena05/plantas.png");   
+}
+
+
+
+#escena_04 .bambiEsc04{
+    width: 495px;
+    height: 800px;
+    position: absolute;
+    z-index: 8;
+    top: 55%;
+    left: 30%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteBambiEsc_04 { 
+    background-image: url("../img/bambi/sprite/escena05/sprites/bambi.png")   
+}
+
+
+#escena_04 .buhoEsc04{
+    width: 110px;
+    height: 800px;
+    position: absolute;
+    z-index: 8;
+    top: 4%;
+    left: 65.8%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+    transform: scaleX(-1);
+}
+
+.spriteBuhoEsc_04 { 
+    background-image: url("../img/bambi/sprite/escena05/sprites/buho.png")   
+}
+
+
+#escena_04 .reyCabezaEsc04{
+    width: 420px;
+    height: 800px;
+    position: absolute;
+    z-index: 8;
+    top: 11%;
+    left: 48%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteReyCabezaEsc_04 { 
+    background-image: url("../img/bambi/sprite/escena05/rey_cabeza.png")   
+}
+
+
+#escena_04 .reyCuerpoEsc04{
+    width: 230px;
+    height: 800px;
+    position: absolute;
+    z-index: 7;
+    top: 40%;
+    left: 54.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteReyCuerpoEsc_04 { 
+    background-image: url("../img/bambi/sprite/escena05/rey_cuerpo.png")   
+}
+
+#escena_04 .reyColaEsc04{
+    width: 40px;
+    height: 800px;
+    position: absolute;
+    z-index: 7;
+    top: 36.6%;
+    left: 62%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteReyColaEsc_04 { 
+    background-image: url("../img/bambi/sprite/escena05/rey_cola.png")   
+}
+
+
+
+
+/************ESCE05***********/
+
+
+#escena_05 .plantasEsc05{
+    width: 2400px;
+    height: 7000px;
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    left: -8%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spritePlantasEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/plantas.png");   
+}
+
+
+
+#escena_05 .conejoOjoEsc05{
+    width: 43px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 52.4%;
+    left: 2%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoConejoEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/ojo_conejo.png")   
+}
+
+
+
+#escena_05 .ardillaOjoEsc05{
+    width: 40px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 34.4%;
+    left: 84.3%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoArdillaEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/ojo_ardilla.png")   
+}
+
+
+#escena_05 .cuerpoBambiEsc05{
+    width: 570px;
+    height: 800px;
+    position: absolute;
+    z-index: 7;
+    top: 37%;
+    left: 53%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCuerpoBambiEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/cuerpo_bambi.png")   
+}
+
+
+
+#escena_05 .cabezaBambiEsc05{
+    width: 364px;
+    height: 800px;
+    position: absolute;
+    z-index: 8;
+    top: 14.9%;
+    left: 45.8%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCabezaBambiEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/bambi_cabeza.png")   
+}
+
+
+#escena_05 .cuerpoFalinaEsc05{
+    width: 570px;
+    height: 800px;
+    position: absolute;
+    z-index: 7;
+    top: 49%;
+    left: 22%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    
+}
+
+.spriteCuerpoFalinaEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/cuerpo_falina.png")   
+}
+
+
+#escena_05 .cabezaFalinaEsc05{
+    width: 275px;
+    height: 800px;
+    position: absolute;
+    z-index: 7;
+    top: 31.7%;
+    left: 39.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCabezaFalinaEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/falina_cabeza.png")   
+}
+
+
+#escena_05 .luciernagaEsc05{
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 59.7%;
+    left: 39.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteLuciernagaEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/glow.png")   
+}
+
+
+#escena_05 .luciernaga2Esc05{
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 34.7%;
+    left: 63.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteLuciernaga2Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/glow.png")   
+}
+
+
+#escena_05 .luciernaga3Esc05{
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 72.7%;
+    left: 51.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteLuciernaga3Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/glow.png")   
+}
+
+
+#escena_05 .luciernaga4Esc05{
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 47.7%;
+    left: 21.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteLuciernaga4Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/glow.png")   
+}
+
+
+#escena_05 .luciernaga5Esc05{
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 51.7%;
+    left: 83.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteLuciernaga5Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/glow.png")   
+}
+
+
+#escena_05 .luciernaga6Esc05{
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 23.7%;
+    left: 39.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteLuciernaga6Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/glow.png")   
+}
+
+
+#escena_05 .luciernaga7Esc05{
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 81.7%;
+    left: 60.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteLuciernaga7Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/glow.png")   
+}
+
+
+#escena_05 .particulaEsc05{
+    width: 55px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 50.7%;
+    left: 63.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteParticulaEsc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/particula.png")   
+}
+
+
+#escena_05 .particula2Esc05{
+    width: 55px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 57.7%;
+    left: 81.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteParticula2Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/particula.png")   
+}
+
+
+#escena_05 .particula3Esc05{
+    width: 55px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 53.7%;
+    left: 38.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteParticula3Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/particula.png")   
+}
+
+
+#escena_05 .particula4Esc05{
+    width: 55px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 68.7%;
+    left: 66.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteParticula4Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/particula.png")   
+}
+
+
+#escena_05 .particula5Esc05{
+    width: 55px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 25.7%;
+    left: 62.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteParticula5Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/particula.png")   
+}
+
+
+#escena_05 .particula6Esc05{
+    width: 55px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 29.7%;
+    left: 34.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteParticula6Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/particula.png")   
+}
+
+
+#escena_05 .particula7Esc05{
+    width: 55px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+    top: 89.7%;
+    left: 50.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0.6;
+}
+
+.spriteParticula7Esc_05 { 
+    background-image: url("../img/bambi/sprite/escena06/particula.png")   
+}
+
+/************ESCE06***********/
+
+
+#escena_06 .plantasEsc06{
+    width: 2400px;
+    height: 7000px;
+    position: absolute;
+    z-index: 15;
+    top: 57.5%;
+    left: -8.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spritePlantasEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/plantas.png");   
+}
+
+#escena_06 .arbolEsc06{
+    width: 1400px;
+    height: 8000px;
+    position: absolute;
+    z-index: 7;
+    top: 0%;
+    left: 36%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteArbolEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/arbol.png");   
+}
+
+
+#escena_06 .fuegoLomaEsc06{
+    width: 1400px;
+    height: 8000px;
+    position: absolute;
+    z-index: 6;
+    top: 9%;
+    left: 18%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteFuegoLomaEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/fuego_loma.png");   
+}
+
+
+#escena_06 .fuegoArbolEsc06{
+    width: 1000px;
+    height: 8000px;
+    position: absolute;
+    z-index: 6;
+    top: 13%;
+    left: 51%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteFuegoArbol1Esc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/sprites/fuego_frontal.png");   
+}
+
+
+#escena_06 .fuegoArbol2Esc06{
+    width: 1350px;
+    height: 8000px;
+    position: absolute;
+    z-index: 7;
+    top: -6%;
+    left: 29%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteFuegoArbol2Esc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/sprites/fuego_arbol_2.png");   
+}
+
+
+#escena_06 .fuegoFrontalEsc06{
+    width: 1000px;
+    height: 8000px;
+    position: absolute;
+    z-index: 7;
+    top: 14%;
+    left: 61%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteFuegoFrontalEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/sprites/fuego_frontal.png");   
+}
+
+
+#escena_06 .pajaroEsc06{
+    width: 165px;
+    height: 500px;
+    position: absolute;
+    z-index: 6;
+    top: 29%;
+    left: 92%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spritePajaroEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/sprites/pajaro.png");   
+}
+
+
+#escena_06 .conejoEsc06{
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    z-index: 5;
+    top: 61%;
+    left: 85%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteConejoEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/sprites/conejo.png");   
+}
+
+
+#escena_06 .ardillaEsc06{
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    z-index: 5;
+    top: 63%;
+    left: 80%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteArdillaEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/sprites/ardilla.png");   
+}
+
+
+#escena_06 .cuerpoFalinaEsc06{
+    width: 475px;
+    height: 1000px;
+    position: absolute;
+    z-index: 6;
+    top: 60%;
+    left: 37%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCuerpoFalinaEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/cuerpo_falina.png");   
+}
+
+
+
+#escena_06 .cabezaFalinaEsc06{
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    z-index: 6;
+    top: 48%;
+    left: 34.8%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteCabezaFalinaEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/sprites/falina.png");   
+}
+
+
+
+#escena_06 .cuerpoBambiEsc06{
+    width: 600px;
+    height: 1000px;
+    position: absolute;
+    z-index: 8;
+    top: 54%;
+    left: 47%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCuerpoBambiEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/cuerpo_bambi.png");   
+}
+
+
+#escena_06 .cabezaBambiEsc06{
+    width: 700px;
+    height: 800px;
+    position: absolute;
+    z-index: 7;
+    top: 11%;
+    left: 38.8%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteCabezaBambiEsc_06 { 
+    background-image: url("../img/bambi/sprite/escena07/sprites/bambi.png");   
+}
+
+
+
+/************ESCE07***********/
+
+
+#escena_07 .plantasEsc07{
+    width: 2450px;
+    height: 7000px;
+    position: absolute;
+    z-index: 15;
+    top: 57%;
+    left: -11%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spritePlantasEsc_07 { 
+    background-image: url("../img/bambi/sprite/escena08/plantas.png");   
+}
+
+
+#escena_07 .ardillaDerEsc07{
+    width: 40px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 40.4%;
+    left: 79.6%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoArdillaDerEsc_07 { 
+    background-image: url("../img/bambi/sprite/escena08/ardilla_der.png")   
+}
+
+
+#escena_07 .ardillaIzqEsc07{
+    width: 35px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 44.1%;
+    left: 7.2%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoArdillaIzqEsc_07 { 
+    background-image: url("../img/bambi/sprite/escena08/ardilla_izq.png")   
+}
+
+
+#escena_07 .mapacheDerEsc07{
+    width: 72px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 13.3%;
+    left: 79.3%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoMapacheDerEsc_07 { 
+    background-image: url("../img/bambi/sprite/escena08/mapache_der.png")   
+}
+
+
+
+#escena_07 .mapacheIzqEsc07{
+    width: 85px;
+    height: 400px;
+    position: absolute;
+    z-index: 4;
+    top: 37.9%;
+    left: 19.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoMapacheIzqEsc_07 { 
+    background-image: url("../img/bambi/sprite/escena08/mapache_izq.png")   
+}
+
+
+#escena_07 .parejaEsc07{
+    width: 580px;
+    height: 1000px;
+    position: absolute;
+    z-index: 8;
+    top: 0%;
+    left: 37%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteParejaEsc_07 { 
+    background-image: url("../img/bambi/sprite/escena08/sprites/pareja.png");   
+}
+
+
+#escena_07 .cria1Esc07{
+    width: 330px;
+    height: 1000px;
+    position: absolute;
+    z-index: 8;
+    top: 59%;
+    left: 24%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteCria1Esc_07 { 
+    background-image: url("../img/bambi/sprite/escena08/sprites/cria1.png");   
+}
+
+
+#escena_07 .cria2Esc07{
+    width: 330px;
+    height: 1000px;
+    position: absolute;
+    z-index: 8;
+    top: 59%;
+    left: 57%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteCria2Esc_07 { 
+    background-image: url("../img/bambi/sprite/escena08/sprites/cria2.png");   
+}
+
+
+
+
+
+
+/************ESCE08***********/
+
+
+#escena_08 .plantasEsc08{
+    width: 2750px;
+    height: 7000px;
+    position: absolute;
+    z-index: 15;
+    top: 34%;
+    left: -26%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spritePlantasEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/plantas.png");   
+}
+
+#escena_08 .ojoMapacheEsc08{
+    width: 135px;
+    height: 500px;
+    position: absolute;
+    z-index: 15;
+    top: 40.8%;
+    left: 10.6%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoMapacheEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/mapache_grande.png");   
+}
+
+
+#escena_08 .ojoMapache2Esc08{
+    width: 75px;
+    height: 500px;
+    position: absolute;
+    z-index: 15;
+    top: 39.6%;
+    left: 31%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoMapache2Esc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/mapache_chico.png");   
+}
+
+#escena_08 .ojoConejoEsc08{
+    width: 40px;
+    height: 500px;
+    position: absolute;
+    z-index: 15;
+    top: 89%;
+    left: 43.4%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoConejoEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/conejo_ojo.png");   
+}
+
+
+#escena_08 .ojoArdillaEsc08{
+    width: 30px;
+    height: 500px;
+    position: absolute;
+    z-index: 15;
+    top: 51%;
+    left: 85%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoArdillaEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/ardilla_izq.png");   
+}
+
+#escena_08 .ojoArdilla2Esc08{
+    width: 45px;
+    height: 500px;
+    position: absolute;
+    z-index: 15;
+    top: 89.6%;
+    left: 65.5%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoArdilla2Esc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/ardilla_der.png");   
+}
+
+
+#escena_08 .cuerpoFalinaEsc08{
+    width: 240px;
+    height: 1000px;
+    position: absolute;
+    z-index: 15;
+    top: 54%;
+    left: 46%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCuerpoFalinaEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/cuerpo_falina.png");   
+}
+
+
+
+#escena_08 .cabezaFalinaEsc_08{
+    width: 140px;
+    height: 1000px;
+    position: absolute;
+    z-index: 15;
+    top: 46.5%;
+    left: 44.8%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCabezaFalinaEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/cabeza_falina.png");   
+}
+
+
+#escena_08 .ojoFalinaEsc_08{
+    width: 47px;
+    height: 500px;
+    position: absolute;
+    z-index: 16;
+    top: 51.7%;
+    left: 46.6%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoFalinaEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/falina_ojo.png");   
+}
+
+
+
+#escena_08 .cuerpoBambiEsc08{
+    width: 295px;
+    height: 1000px;
+    position: absolute;
+    z-index: 15;
+    top: 51%;
+    left: 50.2%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCuerpoBambiEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/cuerpo_bambi.png");   
+}
+
+
+#escena_08 .cabezaBambiEsc_08{
+    width: 310px;
+    height: 1000px;
+    position: absolute;
+    z-index: 16;
+    top: 31%;
+    left: 48.3%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteCabezaBambiEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/cabeza_bambi.png");   
+}
+
+
+#escena_08 .hijaEsc08{
+    width: 180px;
+    height: 1000px;
+    position: absolute;
+    z-index: 16;
+    top: 60%;
+    left: 56%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteHijaEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/hija.png");   
+}
+
+
+#escena_08 .hijaOjoEsc08{
+    width: 44px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 63.5%;
+    left: 57.7%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoHijaEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/hija_ojo.png");   
+}
+
+
+
+#escena_08 .hijoEsc08{
+    width: 180px;
+    height: 1000px;
+    position: absolute;
+    z-index: 15;
+    top: 59.5%;
+    left: 42%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteHijoEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/cria.png");   
+}
+
+
+
+#escena_08 .hijoOjoEsc08{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 62.8%;
+    left: 43.7%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteOjoHijoEsc_08 { 
+    background-image: url("../img/bambi/sprite/escena09/hijo_ojo.png");   
+}
+
+
+/* MARIPOSAS ROJAS */
+
+#escena_08 .mariposaRoja{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 30%;
+    left: 29%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaRoja { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa.png");   
+}
+
+
+#escena_08 .mariposaRoja2{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 62%;
+    left: 51%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaRoja2 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa.png");   
+}
+
+
+#escena_08 .mariposaRoja3{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 52%;
+    left: 71%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaRoja3 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa.png");   
+}
+
+
+#escena_08 .mariposaRoja4{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 67%;
+    left: 73%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaRoja4 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa.png");   
+}
+
+/* MARIPOSAS AMARILLAS */
+
+#escena_08 .mariposaAmarilla{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 29%;
+    left: 72%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaAmarilla { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa2.png") 
+}
+
+
+#escena_08 .mariposaAmarilla2{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 40%;
+    left: 68%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaAmarilla2 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa2.png") 
+}
+
+
+#escena_08 .mariposaAmarilla3{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 52%;
+    left: 38%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaAmarilla3 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa2.png") 
+}
+
+
+#escena_08 .mariposaAmarilla4{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 60%;
+    left: 77%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaAmarilla4 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa2.png") 
+}
+
+
+/* MARIPOSAS AZULES */
+
+#escena_08 .mariposaAzul{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 63%;
+    left: 33%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaAzul { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa3.png") 
+}
+
+
+#escena_08 .mariposaAzul2{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 67%;
+    left: 64%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaAzul2 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa3.png") 
+}
+
+
+#escena_08 .mariposaAzul3{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 39%;
+    left: 43%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaAzul3 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa3.png") 
+}
+
+
+#escena_08 .mariposaAzul4{
+    width: 42px;
+    height: 500px;
+    position: absolute;
+    z-index: 20;
+    top: 85%;
+    left: 71%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteMariposaAzul4 { 
+    background-image: url("../img/bambi/sprite/escena09/mariposa3.png") 
+}
+
+
+
+/*Termina el posicionamiento de sprites*/
+
+
+#escena_00 .fondo{ 
+    background-image: url("../img/bambi/esc_0_fondo.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+
+#escena_01 .fondo{ 
+    background-image: url("../img/bambi/esc_1_fondo.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+
+
+#escena_02 .fondo{ 
+    background-image: url("../img/bambi/esc_2_fondo.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+
+#escena_03 .fondo{ 
+    background-image: url("../img/bambi/fondosImage/esc_3_fondo.jpg");
+    background-size: cover;
+    background-position: 100%;
+    /* background-repeat: no-repeat;  */
+}
+
+
+#escena_04 .fondo{ 
+    background-image: url("../img/bambi/esc_4_fondo.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+#escena_05 .fondo{ 
+    background-image: url("../img/bambi/esc_5_fondo.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+#escena_06 .fondo{           
+    background-image: url("../img/bambi/fondosImage/esc_6_fondo.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+#escena_07 .fondo{ 
+    background-image: url("../img/bambi/esc_7_fondo.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+#escena_08 .fondo{ 
+    background-image: url("../img/bambi/esc_8_fondo.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+
+
+
+
+#escena_00 .btn_interact{ top: 69%; left: 44%;}
+#escena_01 .btn_interact{ top: 60%; left: 75%;}
+#escena_02 .btn_interact {top: 70%; left: 33%;}
+#escena_03 .btn_interact {top: 61%; left: 40%;}
+#escena_04 .btn_interact{ top: 452px; left: 950px; }
+#escena_05 .btn_interact{ top: 27%; left: 47%;}
+#escena_06 .btn_interact{ top: 65%; left: 49%;}
+#escena_07 .btn_interact{ top: 49%; left: 50%; display: block}
+#escena_08 .btn_interact{ top: 54%; left: 51%; display: block}
+
+
+
+
+
+
+
+
+
+
+

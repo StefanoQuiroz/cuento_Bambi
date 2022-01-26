@@ -1,0 +1,926 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Cuentos</title> 
+        <meta name="description" content="Cuentos"> 
+        <meta name="revisit-after" content="1 day">
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
+        <meta name="distribution" content="global">
+        <meta name="author" content="">
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- Chrome, Firefox OS, Opera and Vivaldi -->
+        <meta name="theme-color" content="#000">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#000">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+<!--
+        <link rel="apple-touch-icon" sizes="180x180" href="img/ico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/ico/favicon-16x16.png">
+        <link rel="manifest" href="img/ico/site.webmanifest">
+-->
+        <link rel="mask-icon" href="img/ico/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        
+        <meta property="og:url"                content="www.https://vivaleer.agenciamatch.cl/" />
+        <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="Bienvenido a vivaleercuentodigitales.cl" />
+        <meta property="og:description"        content="" />
+        <meta property="og:image"              content="https://" />
+            
+        <style type="text/css">
+            
+            *{outline:none!important}
+            body,html{
+                min-height: 100vh;
+                
+            }
+        </style>
+       
+    </head>
+    <body>
+        <div id="cuento">
+
+            <div id="player_container">
+                <div id="tooltip_bajo" class="tooltip">
+                    <p>Texto tooltip</p>
+                    <div class="triangulito">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11px" height="9px" x="0px" y="0px"
+                             viewBox="0 0 11 9" style="enable-background:new 0 0 11 9;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#060A14;}
+                            .st1{fill:none;stroke:#3C5FB5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                        </style>
+                        <polyline class="st0" points="8.17,2.75 5.55,6.5 2.92,2.75 "/>
+                        <polyline class="st1" points="8.17,2.75 5.55,6.5 2.92,2.75 "/>
+                        <polygon class="st0" points="2.17,2 8.92,2 5.55,6.5 "/>
+                        </svg>
+                    </div>
+                </div>
+                <div id="tooltip_alto" class="tooltip">
+                    <div class="img_cont">
+                        <img id="image_tooltip" src="" alt="miniatura">
+                    </div>
+                    <p>Texto tooltip</p>
+                    <div class="triangulito">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11px" height="9px" x="0px" y="0px"
+                             viewBox="0 0 11 9" style="enable-background:new 0 0 11 9;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{}
+                            .st1{fill:none;stroke:#3C5FB5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                        </style>
+                        <polyline fill-rule:"evenodd" clip-rule:"evenodd" fill:"#060A14" points="8.17,2.75 5.55,6.5 2.92,2.75 "/>
+                        <polyline class="st1" points="8.17,2.75 5.55,6.5 2.92,2.75 "/>
+                        <polygon class="st0" points="2.17,2 8.92,2 5.55,6.5 "/>
+                        </svg>
+                    </div>
+                </div>
+                <div id="btn_abrir_player" class="btn_abrir_player">
+                    <p>
+                        reproductor
+                    </p>
+                </div>
+                <div id="player">
+                    
+                    <div class="player_btn" id="player_btn_play_pause" data_tooltip="Play">
+                        <div class="ico play">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="15px" viewBox="0 0 7 8" style="enable-background:new 0 0 7 8;" xml:space="preserve">
+                            <path d="M0.87,1.68c0,0,0.01-0.59,0.61-0.37c0.6,0.22,4.65,2.57,4.65,2.57s0.25,0.14,0.25,0.37S6.33,4.5,6.13,4.62
+                                C5.94,4.73,1.6,7.19,1.6,7.19S0.87,7.51,0.87,6.82V1.68z" fill="#BEECFB"/>
+                            </svg>
+                        </div>
+                        <div class="ico pause">
+                            <svg width="13px" height="19px" viewBox="0 0 10 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"><path d="M3,1.875c0,-0.621 -0.504,-1.125 -1.125,-1.125c-0.621,0 -1.125,0.504 -1.125,1.125l0,10.5c0,0.621 0.504,1.125 1.125,1.125c0.621,0 1.125,-0.504 1.125,-1.125l0,-10.5Z" fill="#BEECFB"/><path d="M9,1.875c0,-0.621 -0.504,-1.125 -1.125,-1.125c-0.621,0 -1.125,0.504 -1.125,1.125l0,10.5c0,0.621 0.504,1.125 1.125,1.125c0.621,0 1.125,-0.504 1.125,-1.125l0,-10.5Z" fill="#BEECFB"/></svg>
+                        </div>
+                    </div>
+                    
+                    <div class="player_btn" id="player_btn_escena_ant" data_tooltip="Escena anterior">
+                        <div class="ico">
+                        
+                            <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            
+                            
+                                <g transform="translate(-594.000000, -848.000000)" >
+                                    <g id="Group-Copy" transform="translate(594.000000, 848.000000)">
+                                        <path d="M8.53147997,2.54542928 L13.61131,12.0277786 C13.8721106,12.5146065 13.6888793,13.1206793 13.2020514,13.38148 C13.0568121,13.4592867 12.8945975,13.5 12.72983,13.5 L2.57017001,13.5 C2.01788526,13.5 1.57017001,13.0522847 1.57017001,12.5 C1.57017001,12.3352325 1.6108833,12.1730178 1.68869004,12.0277786 L6.76852003,2.54542928 C7.02932071,2.05860133 7.63539347,1.87537004 8.12222141,2.13617072 C8.29599998,2.22926638 8.43838431,2.37165071 8.53147997,2.54542928 Z" transform="translate(7.650000, 7.200000) scale(-1, 1) rotate(90.000000) translate(-7.650000, -7.200000) " fill="#5B667A"></path>
+                                        <rect transform="translate(0.900000, 6.750000) scale(-1, 1) translate(-0.900000, -6.750000) " x="0" y="0" width="1.8" height="13.5" rx="0.9" fill="#5B667A"></rect>
+                                    </g>
+                                </g>
+                            
+                        </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="player_btn" id="player_btn_escena_sig" data_tooltip="Escena siguiente">
+                        <div class="ico">
+                            <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-744.000000, -848.000000)">
+                                        <g transform="translate(751.000000, 855.000000) scale(-1, 1) translate(-751.000000, -855.000000) translate(744.000000, 848.000000)">
+                                            <path d="M8.53147997,2.54542928 L13.61131,12.0277786 C13.8721106,12.5146065 13.6888793,13.1206793 13.2020514,13.38148 C13.0568121,13.4592867 12.8945975,13.5 12.72983,13.5 L2.57017001,13.5 C2.01788526,13.5 1.57017001,13.0522847 1.57017001,12.5 C1.57017001,12.3352325 1.6108833,12.1730178 1.68869004,12.0277786 L6.76852003,2.54542928 C7.02932071,2.05860133 7.63539347,1.87537004 8.12222141,2.13617072 C8.29599998,2.22926638 8.43838431,2.37165071 8.53147997,2.54542928 Z" transform="translate(7.650000, 7.200000) scale(-1, 1) rotate(90.000000) translate(-7.650000, -7.200000) " fill="#5B667A"></path>
+                                            <rect id="Rectangle" transform="translate(0.900000, 6.750000) scale(-1, 1) translate(-0.900000, -6.750000) " x="0" y="0" width="1.8" height="13.5" rx="0.9" fill="#5B667A"></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="player_btn" id="player_btn_parrafo_ant" data_tooltip="Texto anterior">
+                        <div class="ico">
+                            <svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            
+                            
+                                <g transform="translate(-237.000000, -838.000000)">
+                                    <g transform="translate(254.500000, 855.500000) scale(-1, 1) translate(-254.500000, -855.500000) translate(238.000000, 839.000000)">
+                                        <g stroke-linecap="round">
+
+                                            <path d="M16.2519201,28.9455103 C23.0864439,28.9455103 28.875,23.3345238 28.875,16.5 C28.875,9.66547622 23.3345238,4.125 16.5,4.125 C9.66547622,4.125 4.125,9.66547622 4.125,16.5 C4.125,21.3165733 6.87673702,25.490444 10.8938868,27.5352878" transform="translate(16.500000, 16.535255) rotate(-113.000000) translate(-16.500000, -16.535255) " fill="none" stroke="#5B667A" class="nofill"></path>
+                                            <path d="M28.7999966,6.92403042 C28.7999966,10.6082429 28.7999966,12.4503492 28.7999966,12.4503492 C28.7999966,12.4503492 26.9666633,12.4503492 23.2999966,12.4503492" fill="none" stroke="#5B667A" class="nofill"></path>
+                                            
+                                        </g>
+                                        <path d="M17.9137789,13.9932638 L20.9852419,19.258629 C21.2635222,19.7356809 21.1023859,20.3479986 20.625334,20.6262789 C20.472398,20.7154916 20.2985176,20.7625 20.121463,20.7625 L13.978537,20.7625 C13.4262522,20.7625 12.978537,20.3147847 12.978537,19.7625 C12.978537,19.5854454 13.0255454,19.411565 13.1147581,19.258629 L16.1862211,13.9932638 C16.4645014,13.5162119 17.0768191,13.3550757 17.553871,13.633356 C17.7028747,13.7202747 17.8268601,13.8442602 17.9137789,13.9932638 Z" fill="#5B667A" transform="translate(17.050000, 16.637500) rotate(90.000000) translate(-17.050000, -16.637500) "></path>
+                                    </g>
+                                </g>
+                           
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="player_btn" id="player_btn_parrafo_sig" data_tooltip="Texto siguiente">
+                        <div class="ico">
+                            <svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            
+                                <g transform="translate(-322.000000, -838.000000)">
+                                    <g transform="translate(323.000000, 839.000000)">
+                                        <g stroke-linecap="round">
+                                            
+                                                <path d="M16.2519201,28.9455103 C23.0864439,28.9455103 28.875,23.3345238 28.875,16.5 C28.875,9.66547622 23.3345238,4.125 16.5,4.125 C9.66547622,4.125 4.125,9.66547622 4.125,16.5 C4.125,21.3165733 6.87673702,25.490444 10.8938868,27.5352878" transform="translate(16.500000, 16.535255) rotate(-113.000000) translate(-16.500000, -16.535255) " fill="none" stroke="#5B667A" class="nofill"></path>
+                                                <path d="M28.7999966,6.92403042 C28.7999966,10.6082429 28.7999966,12.4503492 28.7999966,12.4503492 C28.7999966,12.4503492 26.9666633,12.4503492 23.2999966,12.4503492" fill="none" stroke="#5B667A" class="nofill"></path>
+                                            
+                                        </g>
+                                        <path d="M17.9137789,13.9932638 L20.9852419,19.258629 C21.2635222,19.7356809 21.1023859,20.3479986 20.625334,20.6262789 C20.472398,20.7154916 20.2985176,20.7625 20.121463,20.7625 L13.978537,20.7625 C13.4262522,20.7625 12.978537,20.3147847 12.978537,19.7625 C12.978537,19.5854454 13.0255454,19.411565 13.1147581,19.258629 L16.1862211,13.9932638 C16.4645014,13.5162119 17.0768191,13.3550757 17.553871,13.633356 C17.7028747,13.7202747 17.8268601,13.8442602 17.9137789,13.9932638 Z" fill="#5B667A" transform="translate(17.050000, 16.637500) rotate(90.000000) translate(-17.050000, -16.637500) "></path>
+                                    </g>
+                                </g>
+                            
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="player_escenas_launcher">
+                        <div id="title_container">
+                            <span class="flecha"></span>
+                            <p class="nombre_cuento">Nombre Cuento</p>
+                            <span class="n_escena">01.</span>
+                            <p class="nombre_escena">Nombre escena</p>
+                        </div>
+                        <div id="punto_escena_container">
+                            
+                        </div>
+                        <div id="container_desplegable">
+                            <div id="desplegable_escenas_container" class="close">
+                                <h2>Titulo del cuento</h2>
+                                <h3>99 escenas</h3>
+                                <div class="btn_ocultar">
+                                    <div class="ico hide-mobile">
+                                        <svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                            <g transform="translate(-288, -1328)" stroke="#5B667A" stroke-width="2">
+                                                <path d="M289,1335 L293.585786,1330.41421 C294.366835,1329.63316 295.633165,1329.63316 296.414214,1330.41421 L301,1335 L301,1335" transform="translate(295.000000, 1332.000000) scale(1, -1) translate(-295.000000, -1332.000000) " fill="none"></path>
+                                            </g>
+
+                                    </svg>
+                                    </div>
+                                    <div class="ico hide-desktop">
+                                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                            <g transform="translate(-68, -1320)" >
+                                                <g transform="translate(80, 1332) rotate(-315) translate(-80, -1332) translate(72, 1324)">
+                                                    <rect x="7" y="0" width="2" height="16" rx="1" fill="#5B667A"></rect>
+                                                    <rect transform="translate(8, 8) rotate(90) translate(-8, -8) " x="7" y="0" width="2" height="16" rx="1"></rect>
+                                                </g>
+                                            </g>
+
+                                    </svg>
+                                                                    </div>
+                                </div>
+                                <div id="listado_escenas" data-simplebar data-simplebar-auto-hide="false">
+                                    <div class="masked">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                     <div class="player_btn btn_fullscreen" id="player_btn_fullscreen" data_tooltip="Ir a Pantalla Completa">
+                        <div class="ico ir_full">
+                            <svg width="21px" height="23px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"><path d="M6.005,0.75c0.412,0.003 0.745,0.338 0.745,0.75c0,0.414 -0.336,0.75 -0.75,0.75l-0.034,0c-0.329,0.004 -2.966,0.031 -2.966,0c0,-0.033 -0.75,0.031 -0.75,0.75l0,3c0,0.414 -0.336,0.75 -0.75,0.75c-0.004,0 -0.008,0 -0.013,0c-0.001,0 -0.003,0 -0.005,0c-0.004,0 -0.008,0 -0.012,-0.001c-0.398,-0.015 -0.717,-0.342 -0.72,-0.744l0,-0.005l0,-3.75c0,-0.088 0.012,-1.5 2.25,-1.5l3,0l0.005,0Z" fill="#5B667A"/><path d="M11.245,17.25c-0.412,-0.003 -0.745,-0.338 -0.745,-0.75c0,-0.414 0.336,-0.75 0.75,-0.75l0.034,0c0.329,-0.004 2.966,-0.031 2.966,0c0,0.033 0.75,-0.031 0.75,-0.75l0,-3c0,-0.414 0.336,-0.75 0.75,-0.75c0.004,0 0.008,0 0.013,0c0.001,0 0.003,0 0.005,0c0.004,0 0.008,0 0.012,0.001c0.398,0.015 0.717,0.342 0.72,0.744l0,0.005l0,3.75c0,0.088 -0.012,1.5 -2.25,1.5l-3,0l-0.005,0Z" fill="#5B667A"/><path d="M16.5,6.005c-0.003,0.412 -0.338,0.745 -0.75,0.745c-0.414,0 -0.75,-0.336 -0.75,-0.75l0,-0.034c-0.004,-0.329 -0.031,-2.966 0,-2.966c0.033,0 -0.031,-0.75 -0.75,-0.75l-3,0c-0.414,0 -0.75,-0.336 -0.75,-0.75c0,-0.004 0,-0.008 0,-0.013c0,-0.001 0,-0.003 0,-0.005c0,-0.004 0,-0.008 0.001,-0.012c0.015,-0.398 0.342,-0.717 0.744,-0.72l0.005,0l3.75,0c0.088,0 1.5,0.012 1.5,2.25l0,3l0,0.005Z" fill="#5B667A"/><path d="M0.75,11.995c0.003,-0.412 0.338,-0.745 0.75,-0.745c0.414,0 0.75,0.336 0.75,0.75l0,0.034c0.004,0.329 0.031,2.966 0,2.966c-0.033,0 0.031,0.75 0.75,0.75l3,0c0.414,0 0.75,0.336 0.75,0.75c0,0.004 0,0.008 0,0.013c0,0.001 0,0.003 0,0.005c0,0.004 0,0.008 -0.001,0.012c-0.015,0.398 -0.342,0.717 -0.744,0.72l-0.005,0l-3.75,0c-0.088,0 -1.5,-0.012 -1.5,-2.25l0,-3l0,-0.005Z" fill="#5B667A"/></svg>
+                        </div> 
+                        <div class="ico volver_full">
+                            <svg width="21px" height="23px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M1.495,6.75c-0.412,-0.003 -0.745,-0.338 -0.745,-0.75c0,-0.414 0.336,-0.75 0.75,-0.75l0.034,0c0.329,-0.004 2.966,-0.031 2.966,0c0,0.033 0.75,-0.031 0.75,-0.75l0,-3c0,-0.414 0.336,-0.75 0.75,-0.75c0.004,0 0.008,0 0.013,0c0.001,0 0.003,0 0.005,0c0.004,0 0.008,0 0.012,0.001c0.398,0.015 0.717,0.342 0.72,0.744l0,0.005l0,3.75c0,0.088 -0.012,1.5 -2.25,1.5l-3,0l-0.005,0Z" fill="#5B667A"/><path d="M15.755,11.25c0.412,0.003 0.745,0.338 0.745,0.75c0,0.414 -0.336,0.75 -0.75,0.75l-0.034,0c-0.329,0.004 -2.966,0.031 -2.966,0c0,-0.033 -0.75,0.031 -0.75,0.75l0,3c0,0.414 -0.336,0.75 -0.75,0.75c-0.004,0 -0.008,0 -0.013,0c-0.001,0 -0.003,0 -0.005,0c-0.004,0 -0.008,0 -0.012,-0.001c-0.398,-0.015 -0.717,-0.342 -0.72,-0.744l0,-0.005l0,-3.75c0,-0.088 0.012,-1.5 2.25,-1.5l3,0l0.005,0Z" fill="#5B667A"/><path d="M10.5,1.495c0.003,-0.412 0.338,-0.745 0.75,-0.745c0.414,0 0.75,0.336 0.75,0.75l0,0.034c0.004,0.329 0.031,2.966 0,2.966c-0.033,0 0.031,0.75 0.75,0.75l3,0c0.414,0 0.75,0.336 0.75,0.75c0,0.004 0,0.008 0,0.013c0,0.001 0,0.003 0,0.005c0,0.004 0,0.008 -0.001,0.012c-0.015,0.398 -0.342,0.717 -0.744,0.72l-0.005,0l-3.75,0c-0.088,0 -1.5,-0.012 -1.5,-2.25l0,-3l0,-0.005Z" fill="#5B667A"/><path d="M6.75,16.505c-0.003,0.412 -0.338,0.745 -0.75,0.745c-0.414,0 -0.75,-0.336 -0.75,-0.75l0,-0.034c-0.004,-0.329 -0.031,-2.966 0,-2.966c0.033,0 -0.031,-0.75 -0.75,-0.75l-3,0c-0.414,0 -0.75,-0.336 -0.75,-0.75c0,-0.004 0,-0.008 0,-0.013c0,-0.001 0,-0.003 0,-0.005c0,-0.004 0,-0.008 0.001,-0.012c0.015,-0.398 0.342,-0.717 0.744,-0.72l0.005,0l3.75,0c0.088,0 1.5,0.012 1.5,2.25l0,3l0,0.005Z" fill="#5B667A"/></svg>
+                        </div>
+                    </div>
+                    <div class="player_btn" id="player_btn_config" data_tooltip="Configuración">
+                        <div class="ico">
+                            <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            
+                            
+                                <g transform="translate(-415.000000, -846.000000)" fill-rule="nonzero">
+                                    <g transform="translate(425.000000, 856.000000) scale(-1, -1) translate(-425.000000, -856.000000) translate(415.000000, 846.000000)">
+                                        <path d="M19.6537807,12.1916797 L17.7659779,10.7541797 C17.789926,10.5325 17.8104643,10.2733594 17.8104643,9.99917969 C17.8104643,9.725 17.7907684,9.46585938 17.7659779,9.24417969 L19.6555056,7.80585938 C20.0063823,7.53585938 20.1022146,7.05667969 19.8788601,6.65753906 L17.9157233,3.35 C17.7060477,2.97667969 17.2465022,2.785 16.7801374,2.9525 L14.5525694,3.82332031 C14.1255564,3.52332031 13.6779649,3.27 13.2150098,3.0675 L12.8761271,0.766679688 C12.820489,0.33 12.4302605,0 11.9690303,0 L8.03252766,0 C7.57125731,0 7.18191128,0.33 7.12711562,0.76 L6.78739054,3.06917969 C6.33895666,3.26585937 5.89826476,3.51585937 5.45239817,3.825 L3.21885323,2.95167969 C2.80034436,2.79417969 2.29972222,2.97082031 2.09177148,3.3425 L0.126107527,6.65417969 C-0.105791239,7.03585937 -0.00995900356,7.53167969 0.348619627,7.80835938 L2.2364224,9.24585938 C2.20645727,9.52667969 2.19193602,9.77085938 2.19193602,10.0000391 C2.19193602,10.2292188 2.20649739,10.4733594 2.2364224,10.7550391 L0.346894727,12.1933594 C-0.00398202448,12.4641797 -0.0989718665,12.9433594 0.124382627,13.3416797 L2.0875194,16.6491797 C2.29719504,17.0216797 2.7524483,17.215 3.22310531,17.0466797 L5.45067327,16.1758594 C5.87684391,16.4750391 6.32439529,16.7283594 6.78739054,16.9316797 L7.12627322,19.2316797 C7.18187116,19.67 7.57125731,20 8.03337006,20 L11.9698727,20 C12.431143,20 12.8213716,19.67 12.8761271,19.24 L13.2158522,16.9316797 C13.6642861,16.7341797 14.1041356,16.485 14.5508445,16.175 L16.7843895,17.0483203 C16.8922158,17.0891406 17.0043343,17.11 17.1198625,17.11 C17.4518857,17.11 17.7573935,16.9333203 17.9114311,16.6583203 L19.8831122,13.3333203 C20.1022146,12.9433203 20.0063422,12.4641797 19.6537807,12.1916797 Z M10,14.6666667 C7.42634151,14.6666667 5.33333333,12.5736585 5.33333333,10 C5.33333333,7.42634151 7.42634151,5.33333333 10,5.33333333 C12.5736585,5.33333333 14.6666667,7.42634151 14.6666667,10 C14.6666667,12.5736585 12.5736585,14.6666667 10,14.6666667 Z" fill="#5B667A"></path>
+                                    </g>
+                                </g>
+                            
+                        </svg>
+                        </div>
+                    </div>
+                    <div id="container_configurador" class="close">
+                        <div id="configurador" class="close">
+                            <p>Subtítulos</p>
+                            <label class="switch">
+                              <input type="checkbox" id="check_subtitulos" checked class="checks">
+                              <span class="slider round"></span>
+                            </label>
+                            <p>Relato</p>
+                            <label class="switch">
+                              <input type="checkbox" id="check_relato" checked class="checks">
+                              <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div id="marcador_escena">
+                    <div class="container_marcador">
+                        <div class="actual">
+                            <p>20</p>
+                        </div>
+                        <div class="total">
+                            <p>20</p>
+                        </div>
+                    </div>
+                    <div class="player_btn btn_fullscreen" id="btn_fullscreen" data_tooltip="Ir a Pantalla Completa">
+                        <div class="ico ir_full">
+                            <svg width="21px" height="23px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"><path d="M6.005,0.75c0.412,0.003 0.745,0.338 0.745,0.75c0,0.414 -0.336,0.75 -0.75,0.75l-0.034,0c-0.329,0.004 -2.966,0.031 -2.966,0c0,-0.033 -0.75,0.031 -0.75,0.75l0,3c0,0.414 -0.336,0.75 -0.75,0.75c-0.004,0 -0.008,0 -0.013,0c-0.001,0 -0.003,0 -0.005,0c-0.004,0 -0.008,0 -0.012,-0.001c-0.398,-0.015 -0.717,-0.342 -0.72,-0.744l0,-0.005l0,-3.75c0,-0.088 0.012,-1.5 2.25,-1.5l3,0l0.005,0Z" fill="#5B667A"/><path d="M11.245,17.25c-0.412,-0.003 -0.745,-0.338 -0.745,-0.75c0,-0.414 0.336,-0.75 0.75,-0.75l0.034,0c0.329,-0.004 2.966,-0.031 2.966,0c0,0.033 0.75,-0.031 0.75,-0.75l0,-3c0,-0.414 0.336,-0.75 0.75,-0.75c0.004,0 0.008,0 0.013,0c0.001,0 0.003,0 0.005,0c0.004,0 0.008,0 0.012,0.001c0.398,0.015 0.717,0.342 0.72,0.744l0,0.005l0,3.75c0,0.088 -0.012,1.5 -2.25,1.5l-3,0l-0.005,0Z" fill="#5B667A"/><path d="M16.5,6.005c-0.003,0.412 -0.338,0.745 -0.75,0.745c-0.414,0 -0.75,-0.336 -0.75,-0.75l0,-0.034c-0.004,-0.329 -0.031,-2.966 0,-2.966c0.033,0 -0.031,-0.75 -0.75,-0.75l-3,0c-0.414,0 -0.75,-0.336 -0.75,-0.75c0,-0.004 0,-0.008 0,-0.013c0,-0.001 0,-0.003 0,-0.005c0,-0.004 0,-0.008 0.001,-0.012c0.015,-0.398 0.342,-0.717 0.744,-0.72l0.005,0l3.75,0c0.088,0 1.5,0.012 1.5,2.25l0,3l0,0.005Z" fill="#5B667A"/><path d="M0.75,11.995c0.003,-0.412 0.338,-0.745 0.75,-0.745c0.414,0 0.75,0.336 0.75,0.75l0,0.034c0.004,0.329 0.031,2.966 0,2.966c-0.033,0 0.031,0.75 0.75,0.75l3,0c0.414,0 0.75,0.336 0.75,0.75c0,0.004 0,0.008 0,0.013c0,0.001 0,0.003 0,0.005c0,0.004 0,0.008 -0.001,0.012c-0.015,0.398 -0.342,0.717 -0.744,0.72l-0.005,0l-3.75,0c-0.088,0 -1.5,-0.012 -1.5,-2.25l0,-3l0,-0.005Z" fill="#5B667A"/></svg>
+                        </div> 
+                        <div class="ico volver_full">
+                            <svg width="21px" height="23px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M1.495,6.75c-0.412,-0.003 -0.745,-0.338 -0.745,-0.75c0,-0.414 0.336,-0.75 0.75,-0.75l0.034,0c0.329,-0.004 2.966,-0.031 2.966,0c0,0.033 0.75,-0.031 0.75,-0.75l0,-3c0,-0.414 0.336,-0.75 0.75,-0.75c0.004,0 0.008,0 0.013,0c0.001,0 0.003,0 0.005,0c0.004,0 0.008,0 0.012,0.001c0.398,0.015 0.717,0.342 0.72,0.744l0,0.005l0,3.75c0,0.088 -0.012,1.5 -2.25,1.5l-3,0l-0.005,0Z" fill="#5B667A"/><path d="M15.755,11.25c0.412,0.003 0.745,0.338 0.745,0.75c0,0.414 -0.336,0.75 -0.75,0.75l-0.034,0c-0.329,0.004 -2.966,0.031 -2.966,0c0,-0.033 -0.75,0.031 -0.75,0.75l0,3c0,0.414 -0.336,0.75 -0.75,0.75c-0.004,0 -0.008,0 -0.013,0c-0.001,0 -0.003,0 -0.005,0c-0.004,0 -0.008,0 -0.012,-0.001c-0.398,-0.015 -0.717,-0.342 -0.72,-0.744l0,-0.005l0,-3.75c0,-0.088 0.012,-1.5 2.25,-1.5l3,0l0.005,0Z" fill="#5B667A"/><path d="M10.5,1.495c0.003,-0.412 0.338,-0.745 0.75,-0.745c0.414,0 0.75,0.336 0.75,0.75l0,0.034c0.004,0.329 0.031,2.966 0,2.966c-0.033,0 0.031,0.75 0.75,0.75l3,0c0.414,0 0.75,0.336 0.75,0.75c0,0.004 0,0.008 0,0.013c0,0.001 0,0.003 0,0.005c0,0.004 0,0.008 -0.001,0.012c-0.015,0.398 -0.342,0.717 -0.744,0.72l-0.005,0l-3.75,0c-0.088,0 -1.5,-0.012 -1.5,-2.25l0,-3l0,-0.005Z" fill="#5B667A"/><path d="M6.75,16.505c-0.003,0.412 -0.338,0.745 -0.75,0.745c-0.414,0 -0.75,-0.336 -0.75,-0.75l0,-0.034c-0.004,-0.329 -0.031,-2.966 0,-2.966c0.033,0 -0.031,-0.75 -0.75,-0.75l-3,0c-0.414,0 -0.75,-0.336 -0.75,-0.75c0,-0.004 0,-0.008 0,-0.013c0,-0.001 0,-0.003 0,-0.005c0,-0.004 0,-0.008 0.001,-0.012c0.015,-0.398 0.342,-0.717 0.744,-0.72l0.005,0l3.75,0c0.088,0 1.5,0.012 1.5,2.25l0,3l0,0.005Z" fill="#5B667A"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="subtitulos">
+                <p></p>
+            </div>
+            
+            <div id="escenario">
+
+
+               <!-- 00-->
+                <div id="escena_00" class="escena">
+                    <div class="fondo"></div>
+
+                    <div class="spritePlantasEscena_00 plantasEsc00"></div>
+                    
+                    <div class="interact">
+                        <div class="spritePajaro1Esc_00 pajaro1Esc00"></div>
+
+                        <div class="spritePajaro2Esc_00 pajaro2Esc00"></div>
+                        <div class="spritePajaro2OjoEsc_00 pajaro2OjoEsc00"></div>
+
+                        <div class="spritePajaroVolandoEsc_00 pajaroVolandoEsc00"></div>
+
+                        <div class="spriteMapache1Esc_00 mapache1Esc00"></div>
+                        <div class="spriteMapache1OjoEsc_00 mapache1OjoEsc00"></div>
+
+                        <div class="spriteConejoEsc_00 conejoEsc00"></div>
+                        <div class="spriteConejoOjoEsc_00 conejoOjoEsc00"></div>
+
+                        <div class="spriteArdillaEsc_00 ardillaEsc00"></div>
+                        <div class="spriteArdillaOjoEsc_00 ardillaOjoEsc00"></div>
+
+                        <div class="spriteMapache2Esc_00 mapache2Esc00"></div>
+                        <div class="spriteMapache2OjoEsc_00 mapache2OjoEsc00"></div>
+
+                        <div class="spriteMamaCuelloEsc_00 mamaCuelloEsc00"></div>
+                        <div class="spriteMamaCuerpoEsc_00 cuerpoEsc00"></div>
+                        <div class="spriteMamaColaEsc_00 colaEsc00"></div>
+
+                        <div class="spriteBambiEsc_00 bambiEsc00"></div>
+                        <div class="spriteBambiOjoEsc_00 bambiOjoEsc00"></div>
+                        <div class="spriteBambiColaEsc_00 bambiColaEsc00"></div>
+                    </div>
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 01-->
+                <div id="escena_01" class="escena">
+                    <div class="fondo"></div>
+                    <div class="interact">
+                        <div class="spritePezEsc_01 pezEsc01"></div>
+                        <div class="spriteOjoPezEsc_01 ojoPezEsc01"></div>
+                        <div class="spriteConejoEsc_01 conejoEsc01"></div>
+                        <div class="spriteOjoConejoEsc_01 ojoConejoEsc01"></div>
+                        <div class="spriteCuerpoBambiEsc_01 cuerpoBambiEsc01"></div>
+                        <div class="spriteColaBambiEsc_01 colaBambiEsc01"></div>
+                        <div class="spriteOjoBambiEsc_01 ojoBambiEsc01"></div>
+                        <div class="spriteCuerpoFalinaEsc_01 cuerpoFalinaEsc01"></div>
+                        <div class="spriteCabezaFalinaEsc_01 cabezaFalinaEsc01"></div>
+                        <div class="spriteColaFalinaEsc_01 colaFalinaEsc01"></div>
+                        <div class="spriteOjoFalinaEsc_01 ojoFalinaEsc01"></div>
+                        <div class="spriteParcheFondoEsc_01 parcheFondoEsc01"></div>
+                    </div>
+                     
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--02-->
+                <div id="escena_02" class="escena">
+                    <div class="fondo"> </div>
+
+                    <div class="spritePlantasEsc_02 plantasEsc02"></div>
+
+                    <div class="interact">
+                        <div class="spriteBuhoEsc_02 buhoEsc02"></div>
+                        <div class="spriteOjosZorroEsc_02 ojosZorroEsc02"></div>
+                        <div class="spriteOjosConejoEsc_02 ojosConejoEsc02"></div>
+                        <div class="spriteConejoTornadoEsc_02 conejoTornadoEsc02"></div>
+                        <div class="spriteArdillaEsc_02 ardillaEsc02"></div>
+                        <div class="spritePatoEsc_02 patoEsc02"></div>
+
+                        <div class="spriteBambiCabezaEsc_02 bambiCabezaEsc02"></div>
+                        <div class="spriteBambiCuerpoEsc_02 bambiCuerpoEsc02"></div>
+                        <div class="spriteBamPiernaDelDer_02 bamPierDelDerEsc02"></div>
+                        <div class="spriteBamPiernaDelIzq_02 bamPierDelIzqEsc02"></div>
+                        <div class="spriteBamPiernaTrasDer_02 bamPierTrasDerEsc02"></div>
+                        <div class="spriteBamPiernaTrasIzq_02 bamPierTrasIzqEsc02"></div>
+                        
+                    </div>
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--03-->
+                <div id="escena_03" class="escena">
+                    <div class="fondo"></div>
+                    <div class="interact">
+                        <div class="spriteBambiMamaEsc_03 bambiMamaEsc03"></div>
+                        <div class="spriteBambiEsc_03 bambiEsc03"></div>
+                        <div class="spriteConejoEsc_03 conejoEsc03"></div>
+                        <div class="spritePajaroEsc_03 pajaroEsc03"></div>
+                        <div class="spriteCazadorEsc_03 cazadorEsc03"></div>
+                        <div class="spritePlantasEsc_03 plantasEsc03"></div>
+                        <div class="spritePlantas2Esc_03 plantas2Esc03"></div>
+                    </div>
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--04-->
+                <div id="escena_04" class="escena">
+                    <div class="fondo"></div>
+                    <div class="spritePlantasEsc_04 plantasEsc04"></div>
+                    <div class="interact">
+                        <div class="spriteBuhoEsc_04 buhoEsc04"></div>
+                        <div class="spriteBambiEsc_04 bambiEsc04"></div>
+                        <div class="spriteReyCabezaEsc_04 reyCabezaEsc04"></div>
+                        <div class="spriteReyCuerpoEsc_04 reyCuerpoEsc04"></div>
+                        <div class="spriteReyColaEsc_04 reyColaEsc04"></div>
+                    </div>     
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--05-->
+                <div id="escena_05" class="escena">
+                    <div class="fondo"></div>
+                    <div class="spritePlantasEsc_05 plantasEsc05"></div>
+                    <div class="interact">
+                        <div class="spriteOjoConejoEsc_05 conejoOjoEsc05"></div>
+                        <div class="spriteOjoArdillaEsc_05 ardillaOjoEsc05"></div>
+
+                        <div class="spriteCuerpoBambiEsc_05 cuerpoBambiEsc05"></div>
+                        <div class="spriteCabezaBambiEsc_05 cabezaBambiEsc05"></div>
+
+                        <div class="spriteCuerpoFalinaEsc_05 cuerpoFalinaEsc05"></div>
+                        <div class="spriteCabezaFalinaEsc_05 cabezaFalinaEsc05"></div>
+
+                        <div class="spriteLuciernagaEsc_05 luciernagaEsc05"></div>
+                        <div class="spriteLuciernaga2Esc_05 luciernaga2Esc05"></div>
+                        <div class="spriteLuciernaga3Esc_05 luciernaga3Esc05"></div>
+                        <div class="spriteLuciernaga4Esc_05 luciernaga4Esc05"></div>
+                        <div class="spriteLuciernaga5Esc_05 luciernaga5Esc05"></div>
+                        <div class="spriteLuciernaga6Esc_05 luciernaga6Esc05"></div>
+                        <div class="spriteLuciernaga7Esc_05 luciernaga7Esc05"></div>
+
+                        <div class="spriteParticulaEsc_05 particulaEsc05"></div>
+                        <div class="spriteParticula2Esc_05 particula2Esc05"></div>
+                        <div class="spriteParticula3Esc_05 particula3Esc05"></div>
+                        <div class="spriteParticula4Esc_05 particula4Esc05"></div>
+                        <div class="spriteParticula5Esc_05 particula5Esc05"></div>
+                        <div class="spriteParticula6Esc_05 particula6Esc05"></div>
+                        <div class="spriteParticula7Esc_05 particula7Esc05"></div>
+                    </div>
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div> 
+                </div>
+
+
+                <!--06-->
+                <div id="escena_06" class="escena">
+                    <div class="fondo"></div>
+
+                    <div class="spritePlantasEsc_06 plantasEsc06"></div>
+                    <div class="spriteArbolEsc_06 arbolEsc06"></div>
+                    <div class="spriteCuerpoFalinaEsc_06 cuerpoFalinaEsc06"></div>
+                    <div class="spriteCuerpoBambiEsc_06 cuerpoBambiEsc06"></div>
+
+                    <div class="interact">
+                        <div class="spriteFuegoLomaEsc_06 fuegoLomaEsc06"></div>
+                        <div class="spriteFuegoArbol1Esc_06 fuegoArbolEsc06"></div>
+                        <div class="spriteFuegoArbol2Esc_06 fuegoArbol2Esc06"></div>
+                        <div class="spriteFuegoFrontalEsc_06 fuegoFrontalEsc06"></div>
+
+                        <div class="spriteArdillaEsc_06 ardillaEsc06"></div>
+                        <div class="spritePajaroEsc_06 pajaroEsc06"></div>
+                        <div class="spriteConejoEsc_06 conejoEsc06"></div>
+
+                        <div class="spriteCabezaBambiEsc_06 cabezaBambiEsc06"></div>
+                        <div class="spriteCabezaFalinaEsc_06 cabezaFalinaEsc06"></div>
+                    </div>
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--07-->
+                <div id="escena_07" class="escena">
+                    <div class="fondo"></div>
+                    <div class="spritePlantasEsc_07 plantasEsc07"></div>
+                    <div class="interact">
+                        <div class="spriteOjoArdillaDerEsc_07 ardillaDerEsc07"></div>
+                        <div class="spriteOjoArdillaIzqEsc_07 ardillaIzqEsc07"></div>
+
+                        <div class="spriteOjoMapacheDerEsc_07 mapacheDerEsc07"></div>
+                        <div class="spriteOjoMapacheIzqEsc_07 mapacheIzqEsc07"></div>
+
+                        <div class="spriteParejaEsc_07 parejaEsc07"></div>
+                        <div class="spriteCria1Esc_07 cria1Esc07"></div>
+                        <div class="spriteCria2Esc_07 cria2Esc07"></div>
+                    </div>
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div>
+
+                </div>  
+
+
+                <!--08-->
+                <div id="escena_08" class="escena">
+                    <div class="fondo"></div>
+                    <div class="spritePlantasEsc_08 plantasEsc08"></div>
+                    <div class="interact">
+                        <div class="spriteOjoMapacheEsc_08 ojoMapacheEsc08"></div>
+                        <div class="spriteOjoMapache2Esc_08 ojoMapache2Esc08"></div>
+                        <div class="spriteOjoConejoEsc_08 ojoConejoEsc08"></div>
+
+                        <div class="spriteHijoEsc_08 hijoEsc08"></div>
+                        <div class="spriteOjoHijoEsc_08 hijoOjoEsc08"></div>
+
+                        <div class="spriteHijaEsc_08 hijaEsc08"></div>
+                        <div class="spriteOjoHijaEsc_08 hijaOjoEsc08"></div>
+
+                        <div class="spriteCuerpoFalinaEsc_08 cuerpoFalinaEsc08"></div>
+                        <div class="spriteCabezaFalinaEsc_08 cabezaFalinaEsc_08"></div>
+                        <div class="spriteOjoFalinaEsc_08 ojoFalinaEsc_08"></div>
+
+                        <div class="spriteCuerpoBambiEsc_08 cuerpoBambiEsc08"></div>
+                        <div class="spriteCabezaBambiEsc_08 cabezaBambiEsc_08"></div>
+
+                        <div class="spriteOjoArdillaEsc_08 ojoArdillaEsc08"></div>
+                        <div class="spriteOjoArdilla2Esc_08 ojoArdilla2Esc08"></div>
+                    
+                        <div class="spriteMariposaRoja mariposaRoja"></div>
+                        <div class="spriteMariposaRoja2 mariposaRoja2"></div>
+                        <div class="spriteMariposaRoja3 mariposaRoja3"></div>
+                        <div class="spriteMariposaRoja4 mariposaRoja4"></div>
+
+                        <div class="spriteMariposaAmarilla mariposaAmarilla"></div>
+                        <div class="spriteMariposaAmarilla2 mariposaAmarilla2"></div>
+                        <div class="spriteMariposaAmarilla3 mariposaAmarilla3"></div>
+                        <div class="spriteMariposaAmarilla4 mariposaAmarilla4"></div>
+
+                        <div class="spriteMariposaAzul mariposaAzul"></div>
+                        <div class="spriteMariposaAzul2 mariposaAzul2"></div>
+                        <div class="spriteMariposaAzul3 mariposaAzul3"></div>
+                        <div class="spriteMariposaAzul4 mariposaAzul4"></div>
+                       
+                    </div>
+                    <div class="btn_interact primario"> 
+                        <div class="interior">
+                            <span>clic</span>
+                        </div>
+                    </div>
+
+                </div>  
+            </div>
+            
+
+
+            <div id="btn_adelante" class="btn_adelante">
+                <div class="interior">
+                    <span>Siguiente</span>
+                    <div class="ico">
+                            <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-744.000000, -848.000000)">
+                                        <g transform="translate(751.000000, 855.000000) scale(-1, 1) translate(-751.000000, -855.000000) translate(744.000000, 848.000000)">
+                                            <path d="M8.53147997,2.54542928 L13.61131,12.0277786 C13.8721106,12.5146065 13.6888793,13.1206793 13.2020514,13.38148 C13.0568121,13.4592867 12.8945975,13.5 12.72983,13.5 L2.57017001,13.5 C2.01788526,13.5 1.57017001,13.0522847 1.57017001,12.5 C1.57017001,12.3352325 1.6108833,12.1730178 1.68869004,12.0277786 L6.76852003,2.54542928 C7.02932071,2.05860133 7.63539347,1.87537004 8.12222141,2.13617072 C8.29599998,2.22926638 8.43838431,2.37165071 8.53147997,2.54542928 Z" transform="translate(7.650000, 7.200000) scale(-1, 1) rotate(90.000000) translate(-7.650000, -7.200000) " fill="#5B667A"></path>
+                                            <rect id="Rectangle" transform="translate(0.900000, 6.750000) scale(-1, 1) translate(-0.900000, -6.750000) " x="0" y="0" width="1.8" height="13.5" rx="0.9" fill="#5B667A"></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                </div>
+            </div>
+
+            <div id="overlayDark" class="overlayDark"></div>
+            
+            <div id="gira_pantalla">
+                <div class="ico">
+                    <svg width="200px" height="163px" viewBox="0 0 200 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-87.000000, -186.000000)">
+                                <g transform="translate(87.000000, 186.000000)">
+                                    <g opacity="0.5">
+                                        <rect fill="#898F9C" x="0" y="0" width="77.1230678" height="160.61468" rx="9.29807424"></rect>
+                                        <path d="M68.2641787,2.73847392 C65.0333974,2.73847392 59.6639299,2.73847392 59.3454022,2.73847392 C58.5718348,2.73847392 58.0712912,3.31203844 57.8892754,4.34445458 C57.2749719,8.01526752 55.2727976,8.26763591 54.6812461,8.26763591 C54.1807025,8.26763591 22.9649849,8.26763591 22.4416893,8.26763591 C21.8501378,8.26763591 19.8252115,7.99232494 19.23366,4.34445458 C19.0743961,3.31203844 18.5738526,2.73847392 17.7775332,2.73847392 C17.4362535,2.73847392 12.089538,2.73847392 8.85875676,2.73847392 C5.62797548,2.73847392 2.73847392,6.17986105 2.73847392,9.46065011 C2.73847392,12.7414392 2.73847392,147.712642 2.73847392,151.612881 C2.73847392,155.673718 6.83383047,157.876206 8.79050082,157.876206 C9.85984391,157.876206 67.2630915,157.876206 68.3324346,157.876206 C70.2891049,157.876206 74.3845939,155.673718 74.3845939,151.612881 C74.3845939,147.712642 74.3845939,11.3189992 74.3845939,9.46065011 C74.4072135,6.17986105 71.4949599,2.73847392 68.2641787,2.73847392 Z" id="mask" fill="#F7F7F7" fill-rule="nonzero"></path>
+                                    </g>
+                                    <g transform="translate(119.148800, 123.029400) rotate(90.000000) translate(-119.148800, -123.029400) translate(80.148800, 42.529400)">
+                                        <rect fill="#898F9C" x="0" y="0" width="77.1230678" height="160.61468" rx="9.29807424"></rect>
+                                        <path d="M68.2641787,2.73847392 C65.0333974,2.73847392 59.6639299,2.73847392 59.3454022,2.73847392 C58.5718348,2.73847392 58.0712912,3.31203844 57.8892754,4.34445458 C57.2749719,8.01526752 55.2727976,8.26763591 54.6812461,8.26763591 C54.1807025,8.26763591 22.9649849,8.26763591 22.4416893,8.26763591 C21.8501378,8.26763591 19.8252115,7.99232494 19.23366,4.34445458 C19.0743961,3.31203844 18.5738526,2.73847392 17.7775332,2.73847392 C17.4362535,2.73847392 12.089538,2.73847392 8.85875676,2.73847392 C5.62797548,2.73847392 2.73847392,6.17986105 2.73847392,9.46065011 C2.73847392,12.7414392 2.73847392,147.712642 2.73847392,151.612881 C2.73847392,155.673718 6.83383047,157.876206 8.79050082,157.876206 C9.85984391,157.876206 67.2630915,157.876206 68.3324346,157.876206 C70.2891049,157.876206 74.3845939,155.673718 74.3845939,151.612881 C74.3845939,147.712642 74.3845939,11.3189992 74.3845939,9.46065011 C74.4072135,6.17986105 71.4949599,2.73847392 68.2641787,2.73847392 Z" id="mask" fill="#F7F7F7" fill-rule="nonzero"></path>
+                                    </g>
+                                    <path d="M137.897791,24.7881606 L130.238607,20.1927605 C129.559464,19.7853506 128.679483,20.0056806 128.272264,20.6842512 C127.865046,21.3630129 128.085184,22.2433775 128.763754,22.6505963 L131.985958,24.5838824 L118.7784,24.5838824 C107.852297,24.5838824 98.9632405,33.4729472 98.9632405,44.3990615 L98.9632405,66.5718458 C98.9632405,67.3633774 99.6049037,68.0050405 100.396435,68.0050405 C101.187967,68.0050405 101.82963,67.3633774 101.82963,66.5718458 L101.82963,44.3990615 L101.82963,44.3990615 C101.82963,35.0534759 109.432824,27.4502747 118.7784,27.4502747 L131.985958,27.4502747 L128.763754,29.3835608 C128.084993,29.7907796 127.864855,30.6711443 128.272264,31.349906 C128.54094,31.7978275 129.015615,32.045866 129.502519,32.045866 C129.753423,32.045866 130.007767,31.979939 130.238607,31.8413967 L137.897791,27.2459965 C138.329469,26.9870657 138.593559,26.5204171 138.593559,26.0170786 C138.593559,25.5137401 138.329469,25.0470914 137.897791,24.7881606 Z" fill-opacity="0.5" fill="#1A2640" fill-rule="nonzero" transform="translate(118.778400, 43.996641) rotate(-270.000000) translate(-118.778400, -43.996641) "></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <p class="aviso">
+                    Para ver el cuento, por favor rota la pantalla de tu dispositivo
+                </p>
+            </div>
+        </div>
+        <div id="preload_tutorial_modal">
+            <div class="title">
+                <div class="img_cont">
+                    <img src="" alt="miniatura" />
+                </div>
+                <h2>Titulo cuento</h2>
+                <p>estilo cuento</p>
+            </div>
+
+            <div id="modal_real">
+                <div id="tutorial">
+                    <div class="mask">
+                        <div class="wrapper">
+                            <div id="tut01" class="tut" data="0">
+                                <div class="icono">
+                                    <div class="icon"></div>
+                                    <div class="btn_interact"> 
+                                        <div class="interior">
+                                            <span>clic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Interacciones</h2>
+                                <p>A lo largo del cuento aparecerán zonas con las que podrás interactuar</p>
+                            </div>
+
+                            <div id="tut02" class="tut" data="1">
+                                <div class="icono">
+                                    <div class="icon"></div>
+                                    <div class="btn_adelante">
+                                        <div class="interior">
+                                            <span>Siguiente</span>
+                                            <div class="ico">
+                                                    <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g transform="translate(-744.000000, -848.000000)">
+                                                                <g transform="translate(751.000000, 855.000000) scale(-1, 1) translate(-751.000000, -855.000000) translate(744.000000, 848.000000)">
+                                                                    <path d="M8.53147997,2.54542928 L13.61131,12.0277786 C13.8721106,12.5146065 13.6888793,13.1206793 13.2020514,13.38148 C13.0568121,13.4592867 12.8945975,13.5 12.72983,13.5 L2.57017001,13.5 C2.01788526,13.5 1.57017001,13.0522847 1.57017001,12.5 C1.57017001,12.3352325 1.6108833,12.1730178 1.68869004,12.0277786 L6.76852003,2.54542928 C7.02932071,2.05860133 7.63539347,1.87537004 8.12222141,2.13617072 C8.29599998,2.22926638 8.43838431,2.37165071 8.53147997,2.54542928 Z" transform="translate(7.650000, 7.200000) scale(-1, 1) rotate(90.000000) translate(-7.650000, -7.200000) " fill="#5B667A"></path>
+                                                                    <rect id="Rectangle" transform="translate(0.900000, 6.750000) scale(-1, 1) translate(-0.900000, -6.750000) " x="0" y="0" width="1.8" height="13.5" rx="0.9" fill="#5B667A"></rect>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Botón siguiente</h2>
+                                <p>Para avanzar en el cuento, debes presionar el boton que aparecerá en el lado derecho de cada escena</p>
+                            </div>
+
+                            <div id="tut03" class="tut" data="2">
+                                <div class="icono">
+                                    <div class="icon"></div>
+                                </div>
+                                <h2>Reproductor</h2>
+                                <p>Si deseas navegar a través del cuento puedes abrir el reproductor que se encuentra en la parte inferior de la pantalla.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="punto_tuto_container">
+                        <div id="pt0" class="punto current" data_escena="0">
+                            <div class="borde"></div>
+                            <div class="centro"></div>
+                        </div>
+                        <div id="pt1" class="punto" data_escena="1">
+                            <div class="borde"></div>
+                            <div class="centro"></div>
+                        </div>
+                        <div id="pt2" class="punto" data_escena="2">
+                            <div class="borde"></div>
+                            <div class="centro"></div>
+                        </div>
+                    </div>
+                    <div class="btn_flecha_tutorial izq">
+                        <div class="ico">
+                            <svg width="10px" height="18px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M6.75,12l-4.5,-5.25l4.5,-5.25l-0.75,-0.75l-5.25,6l5.25,6l0.75,-0.75Z" fill="#5f687a"/></svg>
+                        </div>
+                    </div>
+                    <div class="btn_flecha_tutorial der">
+                        <div class="ico">
+                            <svg width="10px" height="18px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M0.75,1.5l4.5,5.25l-4.5,5.25l0.75,0.75l5.25,-6l-5.25,-6l-0.75,0.75Z" fill="#5f687a"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div id="cargador">
+                    <p>Cargando...</p>
+                    <div id="barra_preload">
+                        <div class="barra"></div>
+                    </div>
+                    <div class="indicador_porcentaje">
+                        <p>1%</p>
+                    </div>
+                </div>
+
+                <a href="#" id="btn_init" class="btn_principal azul">
+                    <p>Iniciar cuento</p>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div id="portada_cuento" class="creditos">
+            <div class="logo_vivaleer">
+                <img src="img/commons/logo_viva_leer.png">
+            </div>
+            <div class="btn_cerrar">
+                <div class="ico">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g transform="translate(-68, -1320)" >
+                            <g transform="translate(80, 1332) rotate(-315) translate(-80, -1332) translate(72, 1324)">
+                                <rect x="7" y="0" width="2" height="16" rx="1" fill="#5B667A"></rect>
+                                <rect transform="translate(8, 8) rotate(90) translate(-8, -8) " x="7" y="0" width="2" height="16" rx="1"></rect>
+                            </g>
+                        </g>
+
+                    </svg>
+                 </div>
+            </div>
+            <div class="imagen_portada">
+                <img src="/img/losTresCerditos/06.jpg" alt="portada_imagen"/>
+            </div>
+            <div class="creditos_portada">
+                <div class="titulo">
+                    <h1>Título</h1>
+                    <h2>tipo</h2>
+                </div>
+                <div class="barra_share">
+                    <div class="btn_favorito">
+                        <div class="ico lineal">
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-434.000000, -2098.000000)" stroke="#5C667A" stroke-width="1.2">
+                                        <path d="M442.488772,2104.29749 C442.343876,2104.64018 442.067096,2104.97015 441.726708,2105.21734 C441.396482,2105.45716 441.011747,2105.61512 440.654835,2105.65456 L436.055072,2106.61575 L439.372435,2109.4976 C439.653571,2109.74183 439.881864,2110.10772 440.011778,2110.50853 C440.137816,2110.89738 440.169167,2111.31279 440.096347,2111.66492 L439.587043,2116.34571 L443.341189,2114.07539 C443.660119,2113.88252 444.07827,2113.77782 444.49919,2113.77782 C444.907696,2113.77782 445.312126,2113.87649 445.624239,2114.05506 L449.906008,2115.98707 L448.912212,2111.70395 C448.827987,2111.34095 448.857872,2110.91069 448.987722,2110.51007 C449.113807,2110.12108 449.332156,2109.76638 449.597647,2109.52424 L452.756356,2106.03449 L448.385132,2105.65849 C448.014299,2105.62659 447.614896,2105.46542 447.274604,2105.21829 C446.944265,2104.9784 446.675053,2104.66136 446.527285,2104.33421 L444.195414,2100.26108 L442.488772,2104.29749 Z" class="nofill"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="ico pintada">
+                            <svg width="21px" height="20px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;"><path d="M6.466,4.713c-0.104,0.245 -0.303,0.481 -0.547,0.658c-0.238,0.173 -0.515,0.287 -0.772,0.315l-3.601,0.752l2.602,2.261c0.202,0.175 0.365,0.437 0.458,0.725c0.09,0.28 0.113,0.579 0.06,0.832l-0.399,3.665l2.946,-1.781c0.228,-0.138 0.528,-0.213 0.83,-0.213c0.294,0 0.585,0.071 0.809,0.2l3.353,1.513l-0.78,-3.36c-0.06,-0.26 -0.038,-0.568 0.055,-0.855c0.091,-0.28 0.248,-0.536 0.44,-0.71l2.472,-2.732l-3.429,-0.295c-0.265,-0.023 -0.551,-0.139 -0.795,-0.316c-0.238,-0.173 -0.432,-0.401 -0.538,-0.636l-1.825,-3.19l-1.339,3.167Z" style="fill:url(#_Linear1);stroke:url(#_Linear2);stroke-width:0.75px;"/><defs><linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(10.8682,10.5532,-10.5532,10.8682,2.4529,2.79253)"><stop offset="0" style="stop-color:#3df;stop-opacity:1"/><stop offset="1" style="stop-color:#16a0e6;stop-opacity:1"/></linearGradient><linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(11.9396,10.5532,-10.5532,11.9396,2.4529,2.79253)"><stop offset="0" style="stop-color:#16a0e6;stop-opacity:1"/><stop offset="1" style="stop-color:#3df;stop-opacity:1"/></linearGradient></defs></svg>
+                        </div>
+                    </div>
+                    <div class="btn_social facebook">
+                        <div class="ico">
+                            <svg width="20px" height="20px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M8.763,15.75l-7.185,0c-0.457,0 -0.828,-0.37 -0.828,-0.827l0,-13.345c0,-0.457 0.37,-0.828 0.827,-0.828l13.345,0c0.457,0 0.828,0.37 0.828,0.827l0,13.345c0,0.458 -0.371,0.828 -0.828,0.828l-3.816,0l0,-5.801l1.956,0l0.293,-2.27l-2.249,0l0,-1.446c0,-0.656 0.183,-1.103 1.123,-1.103l1.192,0l0,-2.025c-0.207,-0.028 -0.919,-0.09 -1.747,-0.09c-1.728,0 -2.911,1.055 -2.911,2.993l0,1.671l-1.949,0l0,2.27l1.949,0l0,5.801Z" fill="#5f687a" /></svg>
+                        </div>
+                    </div>
+                    <div class="btn_social linkedin">
+                        <div class="ico">
+                            <svg width="20px" height="20px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"><path d="M14.668,0.75l-12.836,0c-0.598,0 -1.082,0.484 -1.082,1.082l0,12.836c0,0.598 0.484,1.082 1.082,1.082l12.836,0c0.598,0 1.082,-0.484 1.082,-1.082l0,-12.836c0,-0.598 -0.484,-1.082 -1.082,-1.082Zm-8.597,11.338l-1.827,0l0,-5.495l1.827,0l0,5.495Zm-0.914,-6.246l-0.012,0c-0.612,0 -1.009,-0.422 -1.009,-0.949c0,-0.539 0.409,-0.95 1.033,-0.95c0.625,0 1.01,0.411 1.022,0.95c0,0.527 -0.397,0.949 -1.034,0.949Zm7.5,6.246l-1.826,0l0,-2.94c0,-0.739 -0.265,-1.243 -0.926,-1.243c-0.504,0 -0.805,0.34 -0.937,0.668c-0.048,0.118 -0.06,0.282 -0.06,0.446l0,3.069l-1.827,0c0,0 0.024,-4.98 0,-5.495l1.827,0l0,0.778c0.243,-0.375 0.677,-0.907 1.646,-0.907c1.202,0 2.103,0.785 2.103,2.473l0,3.151Z" fill="#5f687a"/></svg>
+                        </div>
+                    </div>
+                    <div class="btn_social twitter">
+                        <div class="ico">
+                            <svg width="20px" height="17px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M15.75,2.193c-0.558,0.244 -1.152,0.407 -1.772,0.485c0.638,-0.38 1.124,-0.978 1.353,-1.699c-0.594,0.354 -1.251,0.604 -1.95,0.744c-0.564,-0.601 -1.369,-0.973 -2.246,-0.973c-1.703,0 -3.073,1.382 -3.073,3.076c0,0.244 0.02,0.478 0.071,0.701c-2.557,-0.125 -4.819,-1.35 -6.339,-3.216c-0.265,0.46 -0.421,0.987 -0.421,1.554c0,1.065 0.549,2.009 1.366,2.556c-0.494,-0.01 -0.978,-0.153 -1.389,-0.379l0,0.034c0,1.494 1.066,2.735 2.464,3.021c-0.251,0.069 -0.523,0.101 -0.806,0.101c-0.197,0 -0.396,-0.011 -0.583,-0.052c0.399,1.218 1.529,2.113 2.874,2.142c-1.047,0.819 -2.375,1.312 -3.813,1.312c-0.252,0 -0.494,-0.012 -0.736,-0.042c1.362,0.878 2.977,1.38 4.718,1.38c5.658,-0.001 8.752,-4.688 8.752,-8.751c0,-0.136 -0.005,-0.267 -0.011,-0.398c0.61,-0.433 1.123,-0.974 1.541,-1.596Z" fill="#5f687a"/></svg>
+                        </div>
+                    </div>
+                    <div class="btn_social mail">
+                        <div class="ico">
+                            <svg width="20px" height="14px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M10.693,5.983l5.057,3.197l0,-6.529l-5.057,3.332Z" fill="#5f687a"/><path  d="M0.75,2.651l0,6.529l5.057,-3.197l-5.057,-3.332Z" fill="#5f687a"/><path d="M14.813,0.75l-13.126,0c-0.467,0 -0.839,0.349 -0.909,0.798l7.472,4.923l7.472,-4.923c-0.07,-0.449 -0.442,-0.798 -0.91,-0.798Z" fill="#5f687a"/><path d="M9.834,6.549l-1.326,0.874c-0.079,0.052 -0.168,0.077 -0.258,0.077c-0.09,0 -0.179,-0.025 -0.258,-0.077l-1.326,-0.875l-5.886,3.723c0.072,0.446 0.442,0.791 0.907,0.791l13.125,0c0.466,0 0.836,-0.345 0.908,-0.791l-5.886,-3.722Z" fill="#5f687a"/></svg>
+                        </div>
+                    </div>
+                    <div class="btn_social link">
+                        <div class="ico">
+                            <svg width="20px" height="17px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M14.93,1.567c-0.526,-0.523 -1.239,-0.817 -1.983,-0.817c-0.743,-0.002 -1.456,0.292 -1.981,0.817l-3.619,3.602c-0.716,0.714 -0.99,1.756 -0.716,2.727c0.08,0.283 0.375,0.448 0.659,0.368c0.284,-0.08 0.45,-0.374 0.37,-0.656c-0.169,-0.601 0,-1.246 0.443,-1.687l3.619,-3.602c0.677,-0.673 1.774,-0.674 2.451,0c0.677,0.673 0.677,1.765 0,2.439l-3.619,3.602c-0.238,0.237 -0.539,0.399 -0.867,0.468c-0.289,0.06 -0.475,0.341 -0.415,0.629c0.052,0.247 0.272,0.424 0.525,0.423c0.038,0 0.075,-0.003 0.112,-0.011c0.53,-0.112 1.017,-0.374 1.4,-0.757l3.62,-3.601c1.094,-1.089 1.095,-2.854 0.001,-3.944Z" fill="#5f687a"/><path d="M9.869,5.813c-0.08,-0.284 -0.376,-0.448 -0.661,-0.369c-0.284,0.08 -0.45,0.375 -0.369,0.658c0.169,0.601 -0.001,1.247 -0.444,1.689l-3.626,3.607c-0.678,0.675 -1.777,0.675 -2.455,0.001c-0.678,-0.675 -0.678,-1.768 0,-2.443l3.626,-3.608c0.237,-0.237 0.538,-0.399 0.867,-0.468c0.29,-0.058 0.478,-0.339 0.42,-0.627c-0.058,-0.289 -0.34,-0.476 -0.63,-0.418c-0.004,0.001 -0.007,0.001 -0.011,0.002c-0.532,0.112 -1.019,0.375 -1.403,0.758l-3.626,3.607c-1.088,1.099 -1.074,2.868 0.03,3.95c1.093,1.071 2.847,1.071 3.939,0l3.626,-3.608c0.717,-0.715 0.991,-1.759 0.717,-2.731Z" fill="#5f687a"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="descripcion">
+                   
+                </p>
+
+                <table>
+                    <tbody></tbody>
+                </table>
+
+                <div class="preconfig">
+                    <p class="preconfig_text">¿Cómo deseas vivir esta experiencia?</p>
+                    <a href="#" id="btn_leer_escuchar" class="btn_principal azul" onclick="Creditos.leerEscuchar();">
+                        <p>Leyendo y escuchando</p>
+                    </a>
+
+                    <a href="#" id="btn_leer" class="btn_principal" onclick="Creditos.leer();">
+                        <p>Solo leyendo</p>
+                    </a>
+                </div>
+            </div>
+            <div class="empty"></div>
+        </div>
+
+        <!-- FINAL CUENTO -->
+        <div id="final_cuento">
+            <div class="creditos">
+                <div class="logo_vivaleer">
+                    <img src="img/commons/logo_viva_leer.png">
+                </div>
+                <div class="btn_cerrar">
+                    <div class="ico">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g transform="translate(-68, -1320)" >
+                                <g transform="translate(80, 1332) rotate(-315) translate(-80, -1332) translate(72, 1324)">
+                                    <rect x="7" y="0" width="2" height="16" rx="1" fill="#5B667A"></rect>
+                                    <rect transform="translate(8, 8) rotate(90) translate(-8, -8) " x="7" y="0" width="2" height="16" rx="1"></rect>
+                                </g>
+                            </g>
+
+                        </svg>
+                     </div>
+                </div>
+                <div class="imagen_portada">
+                </div>
+                <div class="creditos_portada">
+                    <div class="titulo">
+<!--                        <p>Felicidades, terminaste el cuento</p>-->
+                        <h1>Título</h1>
+                    </div>
+
+                    <table>
+                        <tbody></tbody>
+                    </table>
+
+
+                    <div class="fixed">
+                        <a href="#" id="btn_volver_leer" class="btn_principal">
+                            <p>Volver a leer</p>
+                            <div class="ico">
+                                <svg width="17px" height="20px" viewBox="0 0 17 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-264.000000, -2098.000000)">
+                                        <g transform="translate(264.000000, 2098.000000)">
+                                            <path d="M16.7775488,3.43045636 L13.530584,0.222433665 C13.2319636,-0.072542904 12.7464546,-0.0743139441 12.4457866,0.218183169 C12.1451187,0.510680282 12.1430711,0.986617794 12.4414506,1.28135822 L15.1502724,3.95783275 L12.4434982,6.6112444 C12.1438339,6.90472542 12.1438339,7.38093843 12.4434982,7.67441945 C12.5933303,7.82129771 12.7894128,7.89473684 12.9857764,7.89473684 C13.18214,7.89473684 13.3784635,7.82129771 13.5282956,7.67469495 L16.7753005,4.49170295 C17.0741217,4.19889099 17.0749246,3.72444902 16.7775488,3.43045636 Z" fill="#5f687a"></path>
+                                            <path d="M16.2555288,3.15789474 L0.744510186,3.15789474 C0.333283664,3.15789474 0,3.49677656 0,3.91491046 L0,9.76930007 C0,10.187434 0.333283664,10.5263158 0.744510186,10.5263158 C1.15573671,10.5263158 1.48902037,10.187434 1.48902037,9.76930007 L1.48902037,4.6719658 L16.2554898,4.6719658 C16.6667163,4.6719658 17,4.33308397 17,3.91495008 C17,3.49681619 16.6667553,3.15789474 16.2555288,3.15789474 Z" fill="#5f687a"></path>
+                                            <path d="M1.84984543,16.0419854 L4.55660815,13.3887861 C4.85599008,13.0952981 4.85627112,12.6193493 4.55660815,12.3255858 C4.25698534,12.0318223 3.77119731,12.0318223 3.47181538,12.3255858 L0.224824245,15.508378 C-0.0740357631,15.8011182 -0.0750796051,16.2755715 0.222535822,16.5695711 L3.46952696,19.7776701 C3.61959932,19.9258113 3.81696577,20 4.01409132,20 C4.20941023,20 4.40476928,19.9273069 4.55431973,19.7819601 C4.85498639,19.489456 4.85703392,19.0135072 4.55865569,18.7185236 L1.84984543,16.0419854 Z" fill="#5f687a"></path>
+                                            <path d="M16.2543653,9.47368421 C15.8425393,9.47368421 15.5087698,9.80134498 15.5087698,10.2056336 L15.5087698,15.3782064 L0.745595543,15.3782064 C0.333769529,15.3782064 0,15.7058672 0,16.1101558 C0,16.5144445 0.333769529,16.8421053 0.745595543,16.8421053 L16.2546385,16.8421053 C16.6664645,16.8421053 17.000234,16.5144445 17,16.1101558 L17,10.2056719 C17,9.8013833 16.6661913,9.47368421 16.2543653,9.47368421 Z" fill="#5f687a"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            </div>
+                        </a>
+
+                        <div class="barra_share">
+                            <div class="btn_favorito">
+                                <div class="ico lineal">
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g transform="translate(-434.000000, -2098.000000)" stroke="#5C667A" stroke-width="1.2">
+                                                <path d="M442.488772,2104.29749 C442.343876,2104.64018 442.067096,2104.97015 441.726708,2105.21734 C441.396482,2105.45716 441.011747,2105.61512 440.654835,2105.65456 L436.055072,2106.61575 L439.372435,2109.4976 C439.653571,2109.74183 439.881864,2110.10772 440.011778,2110.50853 C440.137816,2110.89738 440.169167,2111.31279 440.096347,2111.66492 L439.587043,2116.34571 L443.341189,2114.07539 C443.660119,2113.88252 444.07827,2113.77782 444.49919,2113.77782 C444.907696,2113.77782 445.312126,2113.87649 445.624239,2114.05506 L449.906008,2115.98707 L448.912212,2111.70395 C448.827987,2111.34095 448.857872,2110.91069 448.987722,2110.51007 C449.113807,2110.12108 449.332156,2109.76638 449.597647,2109.52424 L452.756356,2106.03449 L448.385132,2105.65849 C448.014299,2105.62659 447.614896,2105.46542 447.274604,2105.21829 C446.944265,2104.9784 446.675053,2104.66136 446.527285,2104.33421 L444.195414,2100.26108 L442.488772,2104.29749 Z" class="nofill"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="ico pintada">
+                                    <svg width="21px" height="20px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;"><path d="M6.466,4.713c-0.104,0.245 -0.303,0.481 -0.547,0.658c-0.238,0.173 -0.515,0.287 -0.772,0.315l-3.601,0.752l2.602,2.261c0.202,0.175 0.365,0.437 0.458,0.725c0.09,0.28 0.113,0.579 0.06,0.832l-0.399,3.665l2.946,-1.781c0.228,-0.138 0.528,-0.213 0.83,-0.213c0.294,0 0.585,0.071 0.809,0.2l3.353,1.513l-0.78,-3.36c-0.06,-0.26 -0.038,-0.568 0.055,-0.855c0.091,-0.28 0.248,-0.536 0.44,-0.71l2.472,-2.732l-3.429,-0.295c-0.265,-0.023 -0.551,-0.139 -0.795,-0.316c-0.238,-0.173 -0.432,-0.401 -0.538,-0.636l-1.825,-3.19l-1.339,3.167Z" style="fill:url(#_Linear1);stroke:url(#_Linear2);stroke-width:0.75px;"/><defs><linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(10.8682,10.5532,-10.5532,10.8682,2.4529,2.79253)"><stop offset="0" style="stop-color:#3df;stop-opacity:1"/><stop offset="1" style="stop-color:#16a0e6;stop-opacity:1"/></linearGradient><linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(11.9396,10.5532,-10.5532,11.9396,2.4529,2.79253)"><stop offset="0" style="stop-color:#16a0e6;stop-opacity:1"/><stop offset="1" style="stop-color:#3df;stop-opacity:1"/></linearGradient></defs></svg>
+                                </div>
+                            </div>
+                            <div class="btn_social facebook">
+                                <div class="ico">
+                                    <svg width="20px" height="20px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M8.763,15.75l-7.185,0c-0.457,0 -0.828,-0.37 -0.828,-0.827l0,-13.345c0,-0.457 0.37,-0.828 0.827,-0.828l13.345,0c0.457,0 0.828,0.37 0.828,0.827l0,13.345c0,0.458 -0.371,0.828 -0.828,0.828l-3.816,0l0,-5.801l1.956,0l0.293,-2.27l-2.249,0l0,-1.446c0,-0.656 0.183,-1.103 1.123,-1.103l1.192,0l0,-2.025c-0.207,-0.028 -0.919,-0.09 -1.747,-0.09c-1.728,0 -2.911,1.055 -2.911,2.993l0,1.671l-1.949,0l0,2.27l1.949,0l0,5.801Z" fill="#5f687a" /></svg>
+                                </div>
+                            </div>
+                            <div class="btn_social linkedin">
+                                <div class="ico">
+                                    <svg width="20px" height="20px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"><path d="M14.668,0.75l-12.836,0c-0.598,0 -1.082,0.484 -1.082,1.082l0,12.836c0,0.598 0.484,1.082 1.082,1.082l12.836,0c0.598,0 1.082,-0.484 1.082,-1.082l0,-12.836c0,-0.598 -0.484,-1.082 -1.082,-1.082Zm-8.597,11.338l-1.827,0l0,-5.495l1.827,0l0,5.495Zm-0.914,-6.246l-0.012,0c-0.612,0 -1.009,-0.422 -1.009,-0.949c0,-0.539 0.409,-0.95 1.033,-0.95c0.625,0 1.01,0.411 1.022,0.95c0,0.527 -0.397,0.949 -1.034,0.949Zm7.5,6.246l-1.826,0l0,-2.94c0,-0.739 -0.265,-1.243 -0.926,-1.243c-0.504,0 -0.805,0.34 -0.937,0.668c-0.048,0.118 -0.06,0.282 -0.06,0.446l0,3.069l-1.827,0c0,0 0.024,-4.98 0,-5.495l1.827,0l0,0.778c0.243,-0.375 0.677,-0.907 1.646,-0.907c1.202,0 2.103,0.785 2.103,2.473l0,3.151Z" fill="#5f687a"/></svg>
+                                </div>
+                            </div>
+                            <div class="btn_social twitter">
+                                <div class="ico">
+                                    <svg width="20px" height="17px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M15.75,2.193c-0.558,0.244 -1.152,0.407 -1.772,0.485c0.638,-0.38 1.124,-0.978 1.353,-1.699c-0.594,0.354 -1.251,0.604 -1.95,0.744c-0.564,-0.601 -1.369,-0.973 -2.246,-0.973c-1.703,0 -3.073,1.382 -3.073,3.076c0,0.244 0.02,0.478 0.071,0.701c-2.557,-0.125 -4.819,-1.35 -6.339,-3.216c-0.265,0.46 -0.421,0.987 -0.421,1.554c0,1.065 0.549,2.009 1.366,2.556c-0.494,-0.01 -0.978,-0.153 -1.389,-0.379l0,0.034c0,1.494 1.066,2.735 2.464,3.021c-0.251,0.069 -0.523,0.101 -0.806,0.101c-0.197,0 -0.396,-0.011 -0.583,-0.052c0.399,1.218 1.529,2.113 2.874,2.142c-1.047,0.819 -2.375,1.312 -3.813,1.312c-0.252,0 -0.494,-0.012 -0.736,-0.042c1.362,0.878 2.977,1.38 4.718,1.38c5.658,-0.001 8.752,-4.688 8.752,-8.751c0,-0.136 -0.005,-0.267 -0.011,-0.398c0.61,-0.433 1.123,-0.974 1.541,-1.596Z" fill="#5f687a"/></svg>
+                                </div>
+                            </div>
+                            <div class="btn_social mail">
+                                <div class="ico">
+                                    <svg width="20px" height="14px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M10.693,5.983l5.057,3.197l0,-6.529l-5.057,3.332Z" fill="#5f687a"/><path  d="M0.75,2.651l0,6.529l5.057,-3.197l-5.057,-3.332Z" fill="#5f687a"/><path d="M14.813,0.75l-13.126,0c-0.467,0 -0.839,0.349 -0.909,0.798l7.472,4.923l7.472,-4.923c-0.07,-0.449 -0.442,-0.798 -0.91,-0.798Z" fill="#5f687a"/><path d="M9.834,6.549l-1.326,0.874c-0.079,0.052 -0.168,0.077 -0.258,0.077c-0.09,0 -0.179,-0.025 -0.258,-0.077l-1.326,-0.875l-5.886,3.723c0.072,0.446 0.442,0.791 0.907,0.791l13.125,0c0.466,0 0.836,-0.345 0.908,-0.791l-5.886,-3.722Z" fill="#5f687a"/></svg>
+                                </div>
+                            </div>
+                            <div class="btn_social link">
+                                <div class="ico">
+                                    <svg width="20px" height="17px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" ><path d="M14.93,1.567c-0.526,-0.523 -1.239,-0.817 -1.983,-0.817c-0.743,-0.002 -1.456,0.292 -1.981,0.817l-3.619,3.602c-0.716,0.714 -0.99,1.756 -0.716,2.727c0.08,0.283 0.375,0.448 0.659,0.368c0.284,-0.08 0.45,-0.374 0.37,-0.656c-0.169,-0.601 0,-1.246 0.443,-1.687l3.619,-3.602c0.677,-0.673 1.774,-0.674 2.451,0c0.677,0.673 0.677,1.765 0,2.439l-3.619,3.602c-0.238,0.237 -0.539,0.399 -0.867,0.468c-0.289,0.06 -0.475,0.341 -0.415,0.629c0.052,0.247 0.272,0.424 0.525,0.423c0.038,0 0.075,-0.003 0.112,-0.011c0.53,-0.112 1.017,-0.374 1.4,-0.757l3.62,-3.601c1.094,-1.089 1.095,-2.854 0.001,-3.944Z" fill="#5f687a"/><path d="M9.869,5.813c-0.08,-0.284 -0.376,-0.448 -0.661,-0.369c-0.284,0.08 -0.45,0.375 -0.369,0.658c0.169,0.601 -0.001,1.247 -0.444,1.689l-3.626,3.607c-0.678,0.675 -1.777,0.675 -2.455,0.001c-0.678,-0.675 -0.678,-1.768 0,-2.443l3.626,-3.608c0.237,-0.237 0.538,-0.399 0.867,-0.468c0.29,-0.058 0.478,-0.339 0.42,-0.627c-0.058,-0.289 -0.34,-0.476 -0.63,-0.418c-0.004,0.001 -0.007,0.001 -0.011,0.002c-0.532,0.112 -1.019,0.375 -1.403,0.758l-3.626,3.607c-1.088,1.099 -1.074,2.868 0.03,3.95c1.093,1.071 2.847,1.071 3.939,0l3.626,-3.608c0.717,-0.715 0.991,-1.759 0.717,-2.731Z" fill="#5f687a"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+    </body>
+    
+</html>
+
+<link rel="stylesheet" href="css/normalize.min.css?=v0.0.0.0.7" media="screen" >     
+<link rel="stylesheet" href="css/css.css?=v0.0.0.0.24" media="screen" >
+<link rel="stylesheet" href="css/Bambi.css" media="screen" >
+<link rel="stylesheet" href="css/media-queries.css?=v0.0.0.0.22" >
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/simplebar@2.4.3/dist/simplebar.css"
+/>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/gsmin/plugins/AttrPlugin.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" crossorigin="anonymous"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/utils/Draggable.min.js" crossorigin="anonymous"></script>-->
+<script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+<script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@2.4.3/dist/simplebar.min.js"></script>
+<!--<script src="js/dragAndDrop.js" ></script>-->
+<script src="js/Bambi.js" ></script>
+<script src="js/main.js?=v0.0.0.0.24" ></script>
+                            
+<!-- ESTAN TODOS LOS CAMBIOS? -->

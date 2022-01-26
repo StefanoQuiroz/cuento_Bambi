@@ -1,0 +1,265 @@
+@media 
+only screen and (min-device-width: 320px) and (max-device-width: 767px),
+only screen and (min-width: 320px) and (max-width: 767px) {
+    body{
+        
+
+    }
+} 
+@media 
+only screen and (min-device-width: 768px) and (max-device-width: 991px),
+only screen and (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+
+@media 
+only screen and (min-device-width: 200px) and (max-device-width: 823px),
+only screen and (min-width: 200px) and (max-width: 823px) { 
+    .hide-mobile{
+        display: none;
+    }
+    .hide-desktop{
+        display: block;
+    }
+    .title {
+        left: 5%;
+        width: 90%;
+        line-height: 15px;
+    }
+    #modal_real{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+        width: 95%;
+        margin-top: 12%;
+    }
+    #modal_real #tutorial{
+        grid-template-columns: 1fr;
+        grid-template-rows: 215px 40px 80px 20px auto;
+    }
+    
+    #modal_real #tutorial .mask{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    
+    #punto_tuto_container{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .btn_flecha_tutorial{
+        display: none;
+    }
+    #barra_preload{
+        width: 100%;
+    }
+    
+    #player_container{
+        height: 55px;
+    }
+    #player{
+        height: 45px;
+    }
+    .player_btn{
+        height: 33px;
+        width: 33px;
+    }
+    #player_btn_config{
+        margin-left: 2%;
+    }
+    .player_escenas_launcher{
+        max-width: 330px;
+        width: auto;
+/*        margin-left: auto;*/
+        height: 33px;
+        z-index: 1;
+    }
+    #punto_escena_container{
+        display: none;
+    }
+    #title_container{
+        height: 33px;
+        min-width: 100px;
+    }
+    #title_container .nombre_cuento{
+        display: none;
+    }
+    #title_container .nombre_escena{
+        white-space: nowrap;
+        
+        min-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    #title_container .n_escena{
+        margin-left: 2%;
+    }
+    #title_container p:last-child{
+        padding-right: 15px;
+    }
+    #container_desplegable{
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        top: calc(65px - 100vh);
+        z-index: 999;
+    }
+    #desplegable_escenas_container{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: calc(100vh - 10px);
+        border-radius: 14px 14px 0 0;
+    }
+    #desplegable_escenas_container.open { 
+        top:0;
+        z-index: 999!important;
+    }
+    #listado_escenas{
+        height: calc(100vh - 50px);
+        grid-column-end: 4;
+    }
+    #listado_escenas:before {
+        width: 100%;
+    }
+    #listado_escenas .simplebar-track{
+        right: 3px;
+    }
+    #listado_escenas .item_listado_escena{
+        width: calc(100% -20px);
+    }
+    #desplegable_escenas_container .btn_ocultar{
+        justify-self: end;
+        height: 30px;
+        width: 30px;
+    }
+    #desplegable_escenas_container .btn_ocultar .ico{
+        margin-top: 4px;
+    }
+    #subtitulos p{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    #marcador_escena{
+        width: 40px;
+        height: 95px;
+        top: -50px;
+        flex-wrap: wrap;
+/*        background-color: red;*/
+    }
+    #marcador_escena .container_marcador{
+        flex-wrap: wrap;
+        align-content: center;
+        margin: 0;
+        height: 45px;
+        width: 80%;
+        margin-left: 10%;
+        align-self: flex-start;
+/*        align-self: center;*/
+    }
+    #marcador_escena .btn_fullscreen{
+        align-self: flex-end;
+    }
+    #marcador_escena .container_marcador .actual{}
+    #marcador_escena .container_marcador .actual p{
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.7);
+    }
+    #marcador_escena .container_marcador .total{}
+    #marcador_escena .container_marcador .total p{}
+    
+    #final_cuento .creditos,
+    .creditos{
+        grid-template-columns: 100%;
+        grid-template-rows: 44px 390px 1fr;
+    }
+    
+    .creditos .logo_vivaleer, .creditos .empty{
+        grid-column-start: 1;
+        grid-column-end: 1; 
+        grid-row-start: 1;
+    }
+    .creditos .btn_cerrar{
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+    .creditos .creditos_portada .preconfig{
+        grid-template-columns: 100%;
+        grid-gap: 10%;
+        margin-bottom: 30%;
+        grid-template-rows: auto auto auto;
+    }
+    .creditos .creditos_portada .preconfig .preconfig_text{
+        grid-column-end: 1;
+        padding-bottom: 10px;
+    }
+    .creditos .creditos_portada .preconfig .btn_principal{
+        justify-self: center;
+    }
+    #final_cuento .creditos .fixed{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    #final_cuento .creditos .fixed .btn_principal{
+        justify-self: center;
+        margin-bottom: 20px;
+    }
+    .creditos .creditos_portada .barra_share{
+        justify-content: center;
+
+    }
+    .drag_tolltip{
+        width: 274px;
+        grid-template-rows: 8px 128px auto 8px;
+    }
+    .drag_tolltip .cabecera{
+        overflow: hidden;
+        width: 258px;
+        height: 128px;
+    }
+    .drag_tolltip .cabecera img{
+        width: 100%;
+    }
+    .drag_tolltip p{
+        font-size: 30px;
+        line-height: 27px
+    }
+    .drag_tolltip.vertical p:after {
+        margin-left: 110px;
+    }
+    .drag_tolltip.horizontal:after {
+        margin-top: 115px;
+        margin-left: 271px;    
+    }
+    
+    #escena_03 .drag_tolltip{
+        top: 490px;
+        left: 1440px;
+    }
+    #escena_09 .drag_tolltip{
+        top: 300px;
+        left: 85px;
+    }
+    #escena_10 .drag_tolltip{
+        top: 330px;
+        left: 400px;
+    }
+}
+
+@media (orientation: portrait) {
+  #gira_pantalla {
+    display: grid;
+  }
+    
+}
+@media screen and (min-width:320px) and (max-width:823px) and (orientation: landscape) {
+    .creditos {
+        grid-template-rows: 44px 120% 1fr;
+    }
+    #final_cuento .creditos{
+        grid-template-rows: 44px 30% 1fr;
+    }
+}
