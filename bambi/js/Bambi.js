@@ -3,13 +3,12 @@ let JSON_CUENTO = {
     nombre: 'Bambi',
     tipo: 'Cuento',
     descripcion:
-      'Cada año el bosque tiene nuevos miembros que forman parte de él, uno de ellos es Bambi, un tímido cervatillo que descubre con sorpresa y alegría los secretos que esconde su hogar en cada temporada, ya sea en invierno o primavera. Así junto a su madre y primeros amigos, entre ellos una cierva como él llamada Felina, se va encontrando con todo tipo de aventuras, peligros y pérdidas que lo convertirán en el ciervo seguro y protector del bosque que todos conocen y respetan. Este relato es una adaptación libre de la novela Bambi, una vida en el bosque, escrita por el austriaco Felix Salten en 1923, y posteriormente llevada al cine por Walt Disney. Bambi nos enseña sobre el valor de la superación y la convivencia con el entorno y sus miembros. ',   
+      'Cada año el bosque recibe pequeños animales que comienzan el camino de la vida. Bambi, un tímido cervatillo, es uno de ellos. Junto a su madre y a sus amigos de todas las especies, va enfrentando aventuras, peligros y pérdidas que lo convertirán en un ciervo seguro y protector del bosque junto a su fiel amiga Felina. <br> Este relato es una adaptación libre de la novela <b>Bambi, una vida en el bosque</b>, escrita por el austríaco Felix Salten en 1923, y mundialmente difundida por la versión cinematográfica de Walt Disney. ',   
     
     creditos: [
-      ['Autora:', ''],
-      ['Ilustraciones:', ''],
-      ['Narración:', ''],
-      ['Arreglos musicales:', ''],
+      ['Autor:', 'Félix Salten'],
+      ['Ilustraciones:', 'Copec'],
+      ['Narración:', 'Andrés Montero'],
       ['Edición a cargo de:', 'Copec'],
       ['Montaje y desarrollo web:', 'Agencia Match'],
       ['Créditos de sonidos:', "Revise detalles <a href='#' target='_blank'>aquí</a>"],
@@ -84,6 +83,14 @@ let JSON_CUENTO = {
         url: 'audio/bambi/fx/musica_de_bosque.mp3',
       },
       {
+        nombre: 'suspenso_vertiginoso',
+        url: 'audio/bambi/fx/suspenso_vertiginoso.mp3',
+      },
+      {
+        nombre: 'suspenso_corto_piano',
+        url: 'audio/bambi/fx/suspenso_corto_piano.mp3',
+      },
+      {
         nombre: 'rio',
         url: 'audio/bambi/fx/rio.mp3',
       }
@@ -98,7 +105,7 @@ let JSON_CUENTO = {
           {
             texto:
               'La primavera llegó con sus colores y olores a cada rincón del bosque.',
-            tiempo: [0, 5.9, 6.0],
+            tiempo: [0, 5.9, 11.5],
           },
           {
             texto:
@@ -169,7 +176,7 @@ let JSON_CUENTO = {
           {
             texto:
               'Bambi corrió con todas sus fuerzas, escapando de algo que no comprendía.',
-            tiempo: [0, 4.9, 10.0],
+            tiempo: [0, 4.9, 7.0],
           },
           {
             texto:
@@ -200,7 +207,7 @@ let JSON_CUENTO = {
         parrafos: [
           {
             texto: 'Bambi se transformó en un ciervo grande y fuerte.',
-            tiempo: [0, 3.2, 11.0],
+            tiempo: [0, 3.2, 3.0],
           },
           {
             texto:
@@ -232,7 +239,7 @@ let JSON_CUENTO = {
         parrafos: [
           {
             texto:'Con la llegada de una nueva primavera, <br> Bambi y Falina se convirtieron en padres de dos hermosos cervatillos.',
-            tiempo: [0, 7.4, 0.5],
+            tiempo: [0, 7.4, 11.5],
           },
           {
             texto: 'La buena noticia se esparció, <br>y todos en el bosque se pusieron muy alegres.',
@@ -265,7 +272,8 @@ let JSON_CUENTO = {
       }
     ],
   };
-  
+  //CREA Y GESTIONA TODAS LAS ANIMACIONES DEL CUENTO, TIENE FUNCIONES Y UN main_tl => timeline principal
+  //timeline, es secuencia de de elementos => animaciones, funciones y timelines en un periodo de tiempo.
   let ANIM = {
     /* ↓↓↓↓↓ HOLA CATA - COPIA DESDE LA LÍNEA SIGUIENTE ↓↓↓↓↓ */
     main_tl: undefined,
@@ -357,6 +365,7 @@ let JSON_CUENTO = {
             .from('#escena_00 .conejoOjoEsc00', 1.3, {autoAlpha: 0,repeat:9,ease:Power3.easeOut},1.2)
             .from('#escena_00 .ardillaOjoEsc00', 1.3, {autoAlpha: 0,repeat:9,ease:Power3.easeOut},1.4)
             .to('#escena_00 .mapache2OjoEsc00', .8, {autoAlpha: 1,repeat:9,ease:Power3.easeOut})
+            .from('#escena_00 .bambiOjoEsc00',1,{opacity:0, ease:Power4.easeInOut,repeat:13},0)
         ANIM.main_tl.add(preAnimacion1,'0_0+=0');
 
 
@@ -370,6 +379,7 @@ let JSON_CUENTO = {
         let preAnimacion2 = new TimelineMax();
         preAnimacion2
           .to(bambi, 12, {x:-1050, ease:Power1.easeInOut},0)
+          .from("#escena_01 .ojoBambiEsc01",1.3,{opacity:0, ease:Power4.easeInOut,repeat:8},0)
           .to('#escena_01 .ojoConejoEsc01',0.9,{opacity:0, ease:Power4.easeInOut,repeat:17},0)
         ANIM.main_tl.add(preAnimacion2, '1_0-=2');
 
@@ -383,6 +393,8 @@ let JSON_CUENTO = {
         ANIM.main_tl.add(preAnimacion3, '2_0+=1');
 
         
+
+
         /* Escena 05*/
         let preAnimacion6 = new TimelineMax();
         preAnimacion6
@@ -391,6 +403,7 @@ let JSON_CUENTO = {
           .from('#escena_05 .ardillaOjoEsc05', 1.5, {autoAlpha: 0,repeat:9,ease:Power4.easeOut},0.5)
 
         ANIM.main_tl.add(preAnimacion6, '5_0+=0');
+
 
 
         /* Escena 06 */
@@ -416,13 +429,14 @@ let JSON_CUENTO = {
         ANIM.main_tl.add(preAnimacion7_1, '6_1+=0');
 
 
+
         /* Escena 07 */
         let preAnimacion8_0 = new TimelineMax();
         preAnimacion8_0
-          .addCallback(function(){
-            Player.playSoundFX('bosque_en_primavera');
-            Player.cambiaVolume('bosque_en_primavera', 0.9);
-          })
+          /* .addCallback(function(){
+            Player.playSoundFX('musica_de_bosque');
+            Player.cambiaVolume('musica_de_bosque', 0.9);
+          }) */
           .from('#escena_07 .ardillaDerEsc07', 2, {autoAlpha: 0,repeat:9,ease:Power4.easeOut},0)
           .from('#escena_07 .ardillaIzqEsc07', 2, {autoAlpha: 0,repeat:9,ease:Power4.easeOut},0.3)
           .from('#escena_07 .mapacheDerEsc07', 1.3, {autoAlpha: 0,repeat:9,ease:Power4.easeOut},0.6)
@@ -433,10 +447,10 @@ let JSON_CUENTO = {
 
         let preAnimacion8_1 = new TimelineMax();
         preAnimacion8_1
-          .addCallback(function(){
-            Player.playSoundFX('bosque_en_primavera');
-            ANIM.fadeVolume('bosque_en_primavera',0.9,0,9);
-          })
+          /* .addCallback(function(){
+            Player.playSoundFX('musica_de_bosque');
+            ANIM.fadeVolume('musica_de_bosque',0.9,0,9);
+          }) */
         ANIM.main_tl.add(preAnimacion8_1, '7_1+=0');
         const ojosAnimales = ['#escena_08 .ojoMapacheEsc08','#escena_08 .ojoArdilla2Esc08','#escena_08 .ojoConejoEsc08'];
 
@@ -452,6 +466,115 @@ let JSON_CUENTO = {
 
         ANIM.main_tl.add(preAnimacion9_0, '8_0+=0');
 
+
+        /* Escena03 */
+        /* let preAnimacion4_0 = new TimelineMax();
+        preAnimacion4_0
+            
+
+
+
+
+        ANIM.main_tl.add(preAnimacion4_0, '3_0+=0'); */
+
+        /* let preAnimacion4_1 = new TimelineMax();
+        preAnimacion4_1
+           
+
+
+
+        ANIM.main_tl.add(preAnimacion4_1, '3_1+=0'); */
+
+        /* Escena 04 */
+        /* let preAnimacion5 = new TimelineMax();
+        preAnimacion5
+            
+
+
+
+
+
+
+        ANIM.main_tl.add(preAnimacion5, '4_0+=2'); */
+
+
+        /* Escena 05 */
+        /* let preAnimacion6 = new TimelineMax();
+        preAnimacion6
+            
+
+
+
+
+
+        ANIM.main_tl.add(preAnimacion6, '5_0+=0'); */
+
+
+
+        /* Escena 06 */
+       /*let preAnimacion7_0 = new TimelineMax();
+        preAnimacion7_0
+            
+
+
+
+
+        ANIM.main_tl.add(preAnimacion7_0, '6_0+=0');
+
+        let preAnimacion7_1 = new TimelineMax();
+        preAnimacion7_1
+           
+
+
+        ANIM.main_tl.add(preAnimacion7_1, '6_1+=0');
+        
+        let preAnimacion7_2 = new TimelineMax();
+        preAnimacion7_2
+            
+
+
+        ANIM.main_tl.add(preAnimacion7_2, '6_2+=0');
+
+        let preAnimacion7_3 = new TimelineMax();
+        preAnimacion7_3
+            
+
+
+        ANIM.main_tl.add(preAnimacion7_3, '6_3+=0'); 
+
+        
+        //ANIM.main_tl.add(TweenMax.set("#escena_07", {scale:1, x:0, y:0}), 'escena_7+=0.01')
+
+
+        
+        ANIM.main_tl.addLabel('0_0_audio', 'escena_0+=0.1');
+        ANIM.main_tl.addLabel('0_0_audio_fade', '0_0-=2');
+        ANIM.main_tl.addCallback(function () {
+            Player.playSoundFX('musica_de_bosque');
+            //Player.cambiaVolume('copia_de_musica_flauta_magica_Esc01', 0.3);
+        }, '0_0_audio');
+        ANIM.main_tl.addCallback(function () {
+            ANIM.fadeVolume('musica_de_bosque',1,0,2);
+        }, "0_0_audio_fade");
+
+        ANIM.main_tl.addLabel('1_0_audio', 'escena_1+=0.1');
+        ANIM.main_tl.addLabel('1_0_audio_fade', '1_0-=2');
+        ANIM.main_tl.addCallback(function () {
+            Player.playSoundFX('musica_de_bosque_2');
+            //Player.cambiaVolume('copia_de_musica_flauta_magica_Esc01', 0.3);
+        }, '1_0_audio');
+        ANIM.main_tl.addCallback(function () {
+            ANIM.fadeVolume('musica_de_bosque_2',1,0,2);
+        }, "1_0_audio_fade");
+        
+        /* ANIM.main_tl.addLabel('1_0_audio', 'escena_1+=0.1');
+        ANIM.main_tl.addLabel('1_0_audio_fade', '1_0-=2');
+        ANIM.main_tl.addCallback(function () {
+            Player.playSoundFX('bosque');
+        }, '1_0_audio');
+        ANIM.main_tl.addCallback(function () {
+            ANIM.fadeVolume('bosque',1,0,2);
+        }, "1_0_audio_fade"); */
 
         ANIM.main_tl.addLabel('0_0_audio', 'escena_0+=0.1');
         ANIM.main_tl.addLabel('0_0_audio_fade', '0_0-=2');
@@ -476,11 +599,11 @@ let JSON_CUENTO = {
         ANIM.main_tl.addLabel('4_0_audio', 'escena_4+=0.1');
         ANIM.main_tl.addLabel('4_0_audio_fade', '4_0-=2');
         ANIM.main_tl.addCallback(function () {
-            Player.playSoundFX('musica_de_bosque_2');
+            Player.playSoundFX('suspenso_corto_piano');
             //Player.cambiaVolume('copia_de_musica_flauta_magica_Esc01', 0.3);
         }, '4_0_audio');
         ANIM.main_tl.addCallback(function () {
-            ANIM.fadeVolume('musica_de_bosque_2',1,0,2);
+            ANIM.fadeVolume('suspenso_corto_piano',1,0,2);
         }, "4_0_audio_fade");
 
         ANIM.main_tl.addLabel('5_0_audio', 'escena_5+=0.1');
@@ -490,8 +613,18 @@ let JSON_CUENTO = {
             //Player.cambiaVolume('copia_de_musica_flauta_magica_Esc01', 0.3);
         }, '5_0_audio');
         ANIM.main_tl.addCallback(function () {
-            ANIM.fadeVolume('bosque_de_noche',1,0,2);
+            ANIM.fadeVolume('bosque_de_noche',0.9,0,3.0);
         }, "5_0_audio_fade");
+
+        ANIM.main_tl.addLabel('7_0_audio', 'escena_7+=0.1');
+        ANIM.main_tl.addLabel('7_0_audio_fade', '7_0-=2');
+        ANIM.main_tl.addCallback(function () {
+            Player.playSoundFX('musica_de_bosque');
+            //Player.cambiaVolume('copia_de_musica_flauta_magica_Esc01', 0.3);
+        }, '7_0_audio');
+        ANIM.main_tl.addCallback(function () {
+            ANIM.fadeVolume('musica_de_bosque',1,0,2);
+        }, "7_0_audio_fade");
 
         /*INICIO*/
         /*LLAMADAS Y FUNCIONES ESCENA 0*/ //<-----------------------------------------------------
@@ -535,6 +668,8 @@ let JSON_CUENTO = {
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
+            Player.playSoundFX('musica_de_bosque');
+            Player.cambiaVolume('musica_de_bosque', 0.7);
         }, "fin_escena_2");
         
        
@@ -549,8 +684,10 @@ let JSON_CUENTO = {
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
+            Player.playSoundFX('suspenso_vertiginoso');
+            Player.cambiaVolume('suspenso_vertiginoso', 1.0);
         }, "fin_escena_3");
-        
+
         
         /*LLAMADAS Y FUNCIONES ESCENA 4*/ //<-----------------------------------------------------
         ANIM.main_tl.addCallback(function () {
@@ -577,8 +714,8 @@ let JSON_CUENTO = {
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
-            Player.playSoundFX('bosque_de_noche');
-            ANIM.fadeVolume('bosque_de_noche',1,0,13);
+            Player.playSoundFX('musica_de_bosque_2');
+            ANIM.fadeVolume('musica_de_bosque_2',1,0,15);
         }, "fin_escena_5");
         
         
@@ -593,7 +730,8 @@ let JSON_CUENTO = {
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
-            
+            Player.playSoundFX('suspenso_vertiginoso');
+            Player.cambiaVolume('suspenso_vertiginoso', 1.0);            
         }, "fin_escena_6");
         
         /*LLAMADAS Y FUNCIONES ESCENA 7*/ //<-----------------------------------------------------
@@ -607,8 +745,6 @@ let JSON_CUENTO = {
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
-            Player.playSoundFX('musica_de_cerditos');
-            Player.cambiaVolume('musica_de_cerditos', true);
         }, "fin_escena_7");
 
         /*LLAMADAS Y FUNCIONES ESCENA 8*/ //<-----------------------------------------------------
@@ -622,8 +758,6 @@ let JSON_CUENTO = {
           Player.activaBtnSiguiente();
           Player.tooglePlayPauseIco();
           Player.resetSubtitulos();
-          Player.playSoundFX('musica_de_cerditos');
-          Player.cambiaVolume('musica_de_cerditos', true);
       }, "fin_escena_8");
             
       ANIM.creaAnimInteractividad();
@@ -632,9 +766,21 @@ let JSON_CUENTO = {
     //timelines de interaccion
     creaAnimInteractividad: () => {
       /********ESCENA 00 *********/
+        ANIM.anim_interact_ojosBambi = new TimelineMax(); // creo la interacción
+        ANIM.anim_interact_ojosBambi
+          .addLabel('inicio')
+          .from('#escena_00 .bambiOjoEsc00',1,{opacity:1, ease:Power4.easeInOut,repeat:15},0)
+          .addLabel('final');
+        ANIM.anim_interact_ojosBambi.pause(); 
+
+
         ANIM.anim_interact_madreYbambi = new TimelineMax({repeat:4}); // creo la interacción
         ANIM.anim_interact_madreYbambi
             .addLabel('inicio')
+            /* .addCallback(function(){
+               
+            }) */
+            //.to('#escena_00 .mamaCuelloEsc00',1.6,{rotation:35,ease: 'power4.out',yoyo:true},0.5)
             .to('#escena_00 .mamaCuelloEsc00',1.6,{rotation:35, repeatDelay: 2,ease: 'power2.out', duration: 1},0.5)
             .to('#escena_00 .mamaCuelloEsc00',1.6,{rotation:-20, repeatDelay: 2,ease: 'power2.out', duration: 1}, '+=0')
             .addLabel('final');
@@ -647,12 +793,15 @@ let JSON_CUENTO = {
             .addCallback(function(){  })  
 
             .to('#escena_00 .colaEsc00',.6,{rotation:13,ease: 'power4.out',yoyo:true,repeat:14},0)
-            .from('#escena_00 .bambiOjoEsc00',1,{opacity:0, ease:Power4.easeInOut,repeat:10},0)
+            //.from('#escena_00 .bambiOjoEsc00',1,{opacity:1, ease:Power4.easeInOut,repeat:20},0)
             .to('#escena_00 .pajaroVolandoEsc00', 10, {x:2500, ease:Power4.easeInOut},5)
             .fromTo('#escena_00 .pajaroVolandoEsc00', .5, {backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%', ease: SteppedEase.config(2),repeat:10},5.01)
 
             .addLabel('final');
         ANIM.anim_interact_pajaro.pause();
+
+
+        const pez = ["#escena_01 .ojoPezEsc01","#escena_01 .pezEsc01"];
   
         /********ESCENA 01 *********/
         ANIM.anim_interact_lago = new TimelineMax(); // creo la interacción
@@ -660,34 +809,26 @@ let JSON_CUENTO = {
             .addLabel('inicio')
             .addCallback(function(){
                 Player.playSoundFX('rio');
+                //Player.cambiaVolume('martilleo_de_madera', 0.5);
                 ANIM.fadeVolume('rio',1,0,27);
             })
+            .to('#escena_01 .ojoConejoEsc01',0.9,{opacity:0, ease:Power4.easeInOut,repeat:17},0)
+
             .to('#escena_01 .colaFalinaEsc01',0.6,{rotation:27,ease:Power4.out,yoyo:true,repeat:10},0)
-            
+            //.to('#escena_01 .cabezaFalinaEsc01',1,{rotation:-15,ease: 'power4.out',yoyo:true,repeat:5},0)
             .fromTo('#escena_01 .cabezaFalinaEsc01', 3, {rotation:0}, {rotation:"+=50", yoyo:true, repeat:1, transformOrigin:"28px 268px"}, 0)
             
+            
             .fromTo('#escena_01 .colaBambiEsc01',0.6,{backgroundPosition:'0% 0%'},{rotation:-15,ease:Power4.out,yoyo:true,repeat:16},5)
-            .from("#escena_01 .ojoBambiEsc01",0.1,{autoAlpha:1, delay:1.0, immediateRender:false},5)
-            .from("#escena_01 .ojoBambiEsc01",1.5,{autoAlpha:0, delay:2.5, immediateRender:false},5)
-            .from("#escena_01 .ojoBambiEsc01",0.1,{autoAlpha:1, delay:4.0, immediateRender:false},5)
-            .from("#escena_01 .ojoBambiEsc01",1.5,{autoAlpha:0, delay:5.5, immediateRender:false},5)
-            .from("#escena_01 .ojoBambiEsc01",0.1,{autoAlpha:1, delay:7.0, immediateRender:false},5)
-            .from("#escena_01 .ojoBambiEsc01",1.5,{autoAlpha:0, delay:8.5, immediateRender:false},5) 
-            .from("#escena_01 .ojoBambiEsc01",0.1,{autoAlpha:1, delay:10.0, immediateRender:false},5)
-            .from("#escena_01 .ojoBambiEsc01",1.5,{autoAlpha:0, delay:11.5, immediateRender:false},5) 
-            .from("#escena_01 .ojoBambiEsc01",0.1,{autoAlpha:1, delay:13.0, immediateRender:false},5)
+            .from("#escena_01 .ojoBambiEsc01",1.5,{opacity:1, ease:Power4.easeInOut,repeat:8},0)
 
 
-
-            .from("#escena_01 .ojoPezEsc01",0.1,{autoAlpha:1, delay:1.0, immediateRender:false},13)
-            .from("#escena_01 .ojoPezEsc01",1.0,{autoAlpha:0, delay:2.0, immediateRender:false},13)
-            .from("#escena_01 .ojoPezEsc01",0.1,{autoAlpha:1, delay:3.0, immediateRender:false},13)
-            .from("#escena_01 .ojoPezEsc01",1.0,{autoAlpha:0, delay:4.5, immediateRender:false},13)
-            .from("#escena_01 .ojoPezEsc01",0.1,{autoAlpha:1, delay:5.0, immediateRender:false},13)
-            .from("#escena_01 .ojoPezEsc01",1.0,{autoAlpha:0, delay:6.0, immediateRender:false},13) 
-            .from("#escena_01 .ojoPezEsc01",0.1,{autoAlpha:1, delay:7.0, immediateRender:false},13)
-            .from("#escena_01 .ojoPezEsc01",1.0,{autoAlpha:0, delay:8.0, immediateRender:false},13) 
-            .from("#escena_01 .ojoPezEsc01",0.1,{autoAlpha:1, delay:9.0, immediateRender:false},13)
+            .from("#escena_01 .ojoPezEsc01",1,{autoAlpha:0, delay:1.0, immediateRender:false, repeat:10},1)
+            .from(pez,3,{x:100,ease:Circ.easeInOut,repeat:5,yoyo:true},1)
+      
+          
+            .to('#escena_01 .pajaroVolandoEsc01', 10, {x:2500, ease:Power4.easeInOut},5)
+            .fromTo('#escena_01 .pajaroVolandoEsc01', .5, {backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%', ease: SteppedEase.config(2),repeat:10},5.01)
 
             .addLabel('final');
         ANIM.anim_interact_lago.pause(); 
@@ -817,6 +958,12 @@ let JSON_CUENTO = {
             .to('#escena_03 .pajaroEsc03', 3, {x:1000,y:0, ease:Power1.easeInOut}, 30)
             .to('#escena_03 .bambiEsc03', 5, {x:-150,y:0, ease:Power1.easeInOut}, 30)
             
+            /* .fromTo('#escena_03 .loboEsc4',2,{backgroundPosition:'400% 0%'},{backgroundPosition:'300% 0%', ease: SteppedEase.config(1)}, 0)
+            .fromTo('#escena_03 .vientoEsc4',0.6,{backgroundPosition:'300% 0%'},{backgroundPosition:'100% 0%',ease: SteppedEase.config(3), opacity:1}, 1)
+            .fromTo('#escena_03 .casaEsc4',0.1,{backgroundPosition:'200% 0%'},{backgroundPosition:'100% 0%',ease: SteppedEase.config(1)}, 2)
+            .to('#escena_03 .casaEsc4',1.7,{rotation:360,x:1300,ease: Power2.easeInOut}, "-=0.1")
+            .to('#escena_03 .vientoEsc4',0.1,{opacity:0}, 2)
+            .fromTo('#escena_03 .loboEsc4',0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:'0% 0%', ease: SteppedEase.config(1)}, 3) */
             .addLabel('final');
         ANIM.anim_interact_cazador.pause();
     
@@ -882,6 +1029,23 @@ let JSON_CUENTO = {
        ANIM.anim_interact_enamoramiento.pause();
     
     
+       /*  ANIM.anim_interact_jadeoLobo = new TimelineMax(); // creo la interacción
+        ANIM.anim_interact_jadeoLobo
+            .addLabel('inicio')
+            .to('#escena_05 .casaLadrilloEsc6', 0.8, { rotation: -1},5.2)
+            .to('#escena_05 .vientoEsc6', 0.1, { opacity: 0 }) 
+            .to('#escena_05 .loboEsc6',0.1,{opacity:0})
+            .to('#escena_05 .loboJadea',0.1,{opacity:1})
+            .to('#escena_05 .loboJadea',1,{scaleX:1.04, scaleY:1.04, yoyo:true, repeat:5}, 5)
+            .addCallback(function(){
+              Player.playSoundFX('aliento_de_lobo');
+              Player.cambiaVolume('aliento_de_lobo', 1);    
+            }, 5.2)
+            .addLabel('final');
+        ANIM.anim_interact_jadeoLobo.pause(); */
+
+
+
         /********ESCENA 06 *********/
 
         const incendio = ['#escena_06 .fuegoLomaEsc06','#escena_06 .fuegoArbolEsc06','#escena_06 .fuegoArbol2Esc06','#escena_06 .fuegoFrontalEsc06'];
@@ -960,9 +1124,9 @@ let JSON_CUENTO = {
          ANIM.anim_interact_escenaFinal
             .addLabel('inicio')
             .addCallback(function(){
-              Player.playSoundFX('musica_de_bosque');
+              Player.playSoundFX('musica_de_bosque_2');
               //Player.cambiaVolume('musica_de_bosque', 0.5);
-              ANIM.fadeVolume('musica_de_bosque',1.0,0,31);
+              ANIM.fadeVolume('musica_de_bosque_2',1.0,0,31);
             })
           
             .to(mariposasRojas, 5, {
@@ -1013,6 +1177,7 @@ let JSON_CUENTO = {
         //Array de anin interacts
         ANIM.arr_interacts = [
             ANIM.anim_interact_madreYbambi,
+            ANIM.anim_interact_ojosBambi,
             ANIM.anim_interact_pajaro,
             ANIM.anim_interact_lago,
             ANIM.anim_interact_patinaje,
@@ -1075,8 +1240,20 @@ let JSON_CUENTO = {
             }
             div.css({ display: 'block' });
         };
-        switch (nEscena) {
+        switch (nEscena) { 
             case 0:
+
+            if (btn.hasClass('primario')) {
+                btn.click(function () {
+                $(this).css({ display: 'none' });
+                ANIM.anim_interact_ojosBambi.eventCallback('onComplete', muestralo, [
+                    $(this),
+                    cb,
+                ]);
+                ANIM.anim_interact_ojosBambi.play(0);
+                });
+            }
+
             if (btn.hasClass('primario')) {
                 btn.click(function () {
                 $(this).css({ display: 'none' });
@@ -1226,3 +1403,4 @@ let JSON_CUENTO = {
         },
         /*↑↑↑↑ HASTA LA ANTERIOR ↑↑↑↑↑*/
     };
+    
