@@ -207,7 +207,7 @@ let JSON_CUENTO = {
         parrafos: [
           {
             texto: 'Bambi se transformó en un ciervo grande y fuerte.',
-            tiempo: [0, 3.2, 3.0],
+            tiempo: [0, 3.2, 5.0],
           },
           {
             texto:
@@ -466,116 +466,6 @@ let JSON_CUENTO = {
 
         ANIM.main_tl.add(preAnimacion9_0, '8_0+=0');
 
-
-        /* Escena03 */
-        /* let preAnimacion4_0 = new TimelineMax();
-        preAnimacion4_0
-            
-
-
-
-
-        ANIM.main_tl.add(preAnimacion4_0, '3_0+=0'); */
-
-        /* let preAnimacion4_1 = new TimelineMax();
-        preAnimacion4_1
-           
-
-
-
-        ANIM.main_tl.add(preAnimacion4_1, '3_1+=0'); */
-
-        /* Escena 04 */
-        /* let preAnimacion5 = new TimelineMax();
-        preAnimacion5
-            
-
-
-
-
-
-
-        ANIM.main_tl.add(preAnimacion5, '4_0+=2'); */
-
-
-        /* Escena 05 */
-        /* let preAnimacion6 = new TimelineMax();
-        preAnimacion6
-            
-
-
-
-
-
-        ANIM.main_tl.add(preAnimacion6, '5_0+=0'); */
-
-
-
-        /* Escena 06 */
-       /*let preAnimacion7_0 = new TimelineMax();
-        preAnimacion7_0
-            
-
-
-
-
-        ANIM.main_tl.add(preAnimacion7_0, '6_0+=0');
-
-        let preAnimacion7_1 = new TimelineMax();
-        preAnimacion7_1
-           
-
-
-        ANIM.main_tl.add(preAnimacion7_1, '6_1+=0');
-        
-        let preAnimacion7_2 = new TimelineMax();
-        preAnimacion7_2
-            
-
-
-        ANIM.main_tl.add(preAnimacion7_2, '6_2+=0');
-
-        let preAnimacion7_3 = new TimelineMax();
-        preAnimacion7_3
-            
-
-
-        ANIM.main_tl.add(preAnimacion7_3, '6_3+=0'); 
-
-        
-        //ANIM.main_tl.add(TweenMax.set("#escena_07", {scale:1, x:0, y:0}), 'escena_7+=0.01')
-
-
-        
-        ANIM.main_tl.addLabel('0_0_audio', 'escena_0+=0.1');
-        ANIM.main_tl.addLabel('0_0_audio_fade', '0_0-=2');
-        ANIM.main_tl.addCallback(function () {
-            Player.playSoundFX('musica_de_bosque');
-            //Player.cambiaVolume('copia_de_musica_flauta_magica_Esc01', 0.3);
-        }, '0_0_audio');
-        ANIM.main_tl.addCallback(function () {
-            ANIM.fadeVolume('musica_de_bosque',1,0,2);
-        }, "0_0_audio_fade");
-
-        ANIM.main_tl.addLabel('1_0_audio', 'escena_1+=0.1');
-        ANIM.main_tl.addLabel('1_0_audio_fade', '1_0-=2');
-        ANIM.main_tl.addCallback(function () {
-            Player.playSoundFX('musica_de_bosque_2');
-            //Player.cambiaVolume('copia_de_musica_flauta_magica_Esc01', 0.3);
-        }, '1_0_audio');
-        ANIM.main_tl.addCallback(function () {
-            ANIM.fadeVolume('musica_de_bosque_2',1,0,2);
-        }, "1_0_audio_fade");
-        
-        /* ANIM.main_tl.addLabel('1_0_audio', 'escena_1+=0.1');
-        ANIM.main_tl.addLabel('1_0_audio_fade', '1_0-=2');
-        ANIM.main_tl.addCallback(function () {
-            Player.playSoundFX('bosque');
-        }, '1_0_audio');
-        ANIM.main_tl.addCallback(function () {
-            ANIM.fadeVolume('bosque',1,0,2);
-        }, "1_0_audio_fade"); */
-
         ANIM.main_tl.addLabel('0_0_audio', 'escena_0+=0.1');
         ANIM.main_tl.addLabel('0_0_audio_fade', '0_0-=2');
         ANIM.main_tl.addCallback(function () {
@@ -613,7 +503,7 @@ let JSON_CUENTO = {
             //Player.cambiaVolume('copia_de_musica_flauta_magica_Esc01', 0.3);
         }, '5_0_audio');
         ANIM.main_tl.addCallback(function () {
-            ANIM.fadeVolume('bosque_de_noche',0.9,0,3.0);
+            ANIM.fadeVolume('bosque_de_noche',1,0,2);
         }, "5_0_audio_fade");
 
         ANIM.main_tl.addLabel('7_0_audio', 'escena_7+=0.1');
