@@ -432,6 +432,7 @@
     background-position: -100% 0%;
     background-size: 100%;
     background-repeat: repeat-x;
+    opacity: 1;
 }
 
 .spriteOjoBambiEsc_01{ 
@@ -2274,10 +2275,10 @@
 
 
 #escena_03 .fondo{ 
-    background-image: url("../img/bambi/fondosImage/esc_3_fondo.jpg");
+    background-image: url("../img/bambi/esc_3_fondo.jpg");
     background-size: cover;
-    background-position: 100%;
-    /* background-repeat: no-repeat;  */
+    background-position: 40%;
+    background-repeat: no-repeat; 
 }
 
 
