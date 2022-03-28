@@ -850,7 +850,8 @@ let JSON_CUENTO = {
             .fromTo('#escena_03 .conejoEsc03',0.4,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 150}, 1.1)
             .fromTo('#escena_03 .pajaroEsc03',0.2,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 600}, 1.1) */
 
-            .fromTo("#escena_03 .fondo",15,{backgroundPosition:'27%'},{backgroundPosition:'0%', ease:Power1.easeInOut}, 0)
+            .fromTo("#escena_03 .fondo",15,{backgroundPosition:'50%'},{backgroundPosition:'0%', ease:Power1.easeInOut}, 0)
+            //.fromTo("#escena_03 .fondo",15,{backgroundPosition:'27%'},{backgroundPosition:'0%', ease:Power1.easeInOut}, 0)
             
             .fromTo('#escena_03 .bambiMamaEsc03',0.4,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 20}, 1.1)
             .fromTo('#escena_03 .bambiEsc03',0.4,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 30}, 1.1)
@@ -1114,15 +1115,13 @@ let JSON_CUENTO = {
             //estado inicial
             //TweenMax.killTweensOf("#escena_00 .stuff");
             //TweenMax.set('#escena_00 .interact',{scale:1, transformOrigin:'1280px 395px'});
-            TweenMax.set('#escena_03 .bambiMamaEsc03',{x:0,y:0})
-            TweenMax.set('#escena_03 .conejoEsc03',{x:0,y:0})
-            TweenMax.set('#escena_03 .pajaroEsc03',{x:0,y:0})
-            TweenMax.set('#escena_03 .bambiEsc03',{x:0,y:0})
-            TweenMax.set('#escena_03 .casaEsc4',{backgroundPosition:'0% 0%'});
-            TweenMax.set('#escena_04 .casaMaderaEsc5',{backgroundPosition:'0% 0%'});
-            TweenMax.set('#escena_05 .loboEsc6',{opacity: 1})
-            TweenMax.set('#escena_05 .loboJadea',{opacity:0});
-            TweenMax.to('#escena_07 .loboEsc8',{backgroundPosition:'100% 0%', opacity:0});
+            TweenMax.set('#escena_03 .bambiMamaEsc03',{x:0,y:0, backgroundPosition:'0% 0%'})
+            TweenMax.set('#escena_03 .conejoEsc03',{x:0,y:0, backgroundPosition:'0% 0%'})
+            TweenMax.set('#escena_03 .pajaroEsc03',{x:0,y:0, backgroundPosition:'0% 0%'})
+            TweenMax.set('#escena_03 .bambiEsc03',{x:0,y:0, backgroundPosition:'0% 0%'})
+            TweenMax.set('#escena_03 .cazadorEsc03',{x:0,y:0})
+            TweenMax.set('#escena_03 .fondo',{css: {backgroundPosition: "50%"}})
+           
             ANIM.pauseWaitSound();
             ANIM.pauseAnimaciones();
             $('.indicador_interactividad').css({'display':'none'});

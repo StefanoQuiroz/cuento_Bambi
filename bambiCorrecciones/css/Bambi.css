@@ -2277,7 +2277,7 @@
 #escena_03 .fondo{ 
     background-image: url("../img/bambi/esc_3_fondo.jpg");
     background-size: cover;
-    background-position: 40%;
+    background-position: 50%;
     background-repeat: no-repeat; 
 }
 
