@@ -1,9 +1,9 @@
 //archivo de configuración
 let JSON_CUENTO = {
     nombre: 'Bambi',
-    tipo: 'Cuento',
+    tipo: 'Cuentos clásicos',
     descripcion:
-      'Cada año el bosque recibe pequeños animales que comienzan el camino de la vida. Bambi, un tímido cervatillo, es uno de ellos. Junto a su madre y a sus amigos de todas las especies, va enfrentando aventuras, peligros y pérdidas que lo convertirán en un ciervo seguro y protector del bosque junto a su fiel amiga Felina. <br> Este relato es una adaptación libre de la novela <b>Bambi, una vida en el bosque</b>, escrita por el austríaco Felix Salten en 1923, y mundialmente difundida por la versión cinematográfica de Walt Disney. ',   
+      'Cada año el bosque recibe pequeños animales que comienzan el camino de la vida. Bambi, un tímido cervatillo, es uno de ellos. Junto a su madre y a sus amigos de todas las especies, va enfrentando aventuras, peligros y pérdidas que lo convertirán en un ciervo seguro y protector del bosque junto a su fiel amiga Felina. <br> Este relato es una adaptación libre de la novela <b><i>Bambi, una vida en el bosque</i></b>, escrita por el austríaco Felix Salten en 1923, y mundialmente difundida por la versión cinematográfica de Walt Disney. ',   
     
     creditos: [
       ['Autor:', 'Félix Salten'],
@@ -265,7 +265,7 @@ let JSON_CUENTO = {
             tiempo: [12.1, 19.0, 0.5]
           },
           {
-            texto: 'Y colorín colorado, este cuento se ha acabado',
+            texto: 'Y colorín colorado, este cuento se ha acabado.',
             tiempo: [19.5, 23.8, 0.5]
           }
         ],
@@ -378,16 +378,29 @@ let JSON_CUENTO = {
 
         const pezPreAnim = ["#escena_01 .ojoPezEsc01","#escena_01 .pezEsc01"];
 
+        let preAnimacion2_0 = new TimelineMax();
+        preAnimacion2_0
+          //.to('#escena_01 .ojoConejoEsc01',2.5,{opacity:0, ease:Power3.easeInOut,repeat:4},0)
+          .from('#escena_01 .ojoConejoEsc01',.9,{opacity:0, ease:Power4.easeInOut,repeat:-1},0)
+          .to('#escena_01 .pajaroVolandoEsc01', 10, {x:2500, ease:Power3.easeInOut},3.5)
+          .fromTo('#escena_01 .pajaroVolandoEsc01', .5, {backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%', ease: SteppedEase.config(2),repeat:10},3.75)         
+          .from(pezPreAnim,2,{x:50,ease:Circ.easeInOut,repeat:3,yoyo:true},0.1) 
+        ANIM.main_tl.add(preAnimacion2_0, '1_0-=10');
+
         let preAnimacion2 = new TimelineMax();
         preAnimacion2
           .to(bambi, 12, {x:-1050, ease:Power1.easeInOut},0)
-          .to("#escena_01 .ojoBambiEsc01",2.5,{opacity:0, ease:Power3.easeInOut,repeat:4},0)
-          .to('#escena_01 .ojoConejoEsc01',2.5,{opacity:0, ease:Power3.easeInOut,repeat:4},0)
+          //.to("#escena_01 .ojoBambiEsc01",2.5,{opacity:0, ease:Power3.easeInOut,repeat:4},0)
+          .to('#escena_01 .ojoBambiEsc01',1,{opacity:0, ease:Power4.easeInOut,repeat:15}, 0)
+          //.to('#escena_01 .ojoConejoEsc01',2.5,{opacity:0, ease:Power3.easeInOut,repeat:4},0)
+          .to('#escena_01 .ojoConejoEsc01',.9,{opacity:1, ease:Power4.easeInOut,repeat:15},0)
+          .to('#escena_01 .pajaroVolandoEsc01', 10, {x:2500, ease:Power3.easeInOut},3.5)
+          .fromTo('#escena_01 .pajaroVolandoEsc01', .5, {backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%', ease: SteppedEase.config(2),repeat:10},3.75)
 
-          .from(pezPreAnim,2,{x:50,ease:Circ.easeInOut,repeat:3,yoyo:true},0.1) //3s
+          .from(pezPreAnim,2,{x:50,ease:Circ.easeInOut,repeat:3,yoyo:true}, 0) //3s
           //.to('#escena_01 .pajaroVolandoEsc01', 10, {x:2600, ease:Power4.easeInOut},0)
           //.fromTo('#escena_01 .pajaroVolandoEsc01', .5, {backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%', ease: SteppedEase.config(2),repeat:10},0.1)  
-        ANIM.main_tl.add(preAnimacion2, '1_0+=2');
+        ANIM.main_tl.add(preAnimacion2, '1_1-=4');
 
         /* Escena02 */
         
@@ -719,14 +732,45 @@ let JSON_CUENTO = {
                 //Player.cambiaVolume('martilleo_de_madera', 0.5);
                 ANIM.fadeVolume('rio',1,0,27);
             })
-            .to('#escena_01 .ojoConejoEsc01',2.5,{opacity:1, ease:Power3.easeInOut,repeat:7},0)
+            .set('#escena_01 .ojoConejoEsc01',{alpha:1})
+            .set('#escena_01 .ojoConejoEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoConejoEsc01',{alpha:1},'+=0.35')
+            //.from('#escena_01 .ojoConejoEsc01',.9,{opacity:0, ease:Power4.easeInOut,repeat:15},0)
+            //.to('#escena_01 .ojoConejoEsc01',2.5,{opacity:1, ease:Power3.easeInOut,repeat:7},0)
+
+            .set('#escena_01 .ojoBambiEsc01',{alpha:1})
+            .set('#escena_01 .ojoBambiEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:1},'+=0.35')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:0},'+=0.2')
+            .set('#escena_01 .ojoBambiEsc01',{alpha:1},'+=0.35')
 
             .to('#escena_01 .colaFalinaEsc01',0.6,{rotation:27,ease:Power4.out,yoyo:true,repeat:10},0)
+
             //.to('#escena_01 .cabezaFalinaEsc01',1,{rotation:-15,ease: 'power4.out',yoyo:true,repeat:5},0)
             .fromTo('#escena_01 .cabezaFalinaEsc01', 3, {rotation:0}, {rotation:"+=50", yoyo:true, repeat:1, transformOrigin:"28px 268px"}, 0)
             
             .fromTo('#escena_01 .colaBambiEsc01',0.6,{backgroundPosition:'0% 0%'},{rotation:-15,ease:Power4.out,yoyo:true,repeat:16},5)
-            .to("#escena_01 .ojoBambiEsc01",2.5,{opacity:1, ease:Power3.easeInOut,repeat:7},0)
+            
+            //.to("#escena_01 .ojoBambiEsc01",2.5,{opacity:1, ease:Power3.easeInOut,repeat:7},0)
+            //.from('#escena_01 .ojoBambiEsc01',1,{opacity:1, ease:Power4.easeInOut,repeat:9}, 1)
 
             .from("#escena_01 .ojoPezEsc01",1,{autoAlpha:0, delay:1.0, immediateRender:false, repeat:10},1)
             .from(pez,3,{x:100,ease:Circ.easeInOut,repeat:4,yoyo:true},1)
